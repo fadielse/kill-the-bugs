@@ -1,2 +1,2 @@
 # kill-the-cockroach
-a simple multiplayer game with native swift
+a simple local multiplayer game with native swift using 'MultipeerConnectivity'
