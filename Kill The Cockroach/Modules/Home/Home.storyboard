@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4AI-5x-hsM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VIDEOPHREAK.ttf">
+            <string>Videophreak</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="AnO-fp-rAl">
+            <objects>
+                <viewController id="4AI-5x-hsM" customClass="HomeViewController" customModule="Kill_The_Cockroach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="60l-vQ-dez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run-cocroach" translatesAutoresizingMaskIntoConstraints="NO" id="9xj-Iv-ZqG">
+                                <rect key="frame" x="67.5" y="95" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="U22-Zr-TLm"/>
+                                    <constraint firstAttribute="height" constant="240" id="k4A-vV-wCX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-t3-mxz">
+                                <rect key="frame" x="97.5" y="410" width="180" height="45"/>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.63921568630000003" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="qkl-cU-eaU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="25"/>
+                                <state key="normal" title="HOST GAME">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onHostButtonTapped:" destination="4AI-5x-hsM" eventType="touchUpInside" id="r3W-SR-Mbl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-LD-LjL">
+                                <rect key="frame" x="97.5" y="499" width="180" height="45"/>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.63921568630000003" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="25"/>
+                                <state key="normal" title="JOIN GAME">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onJoinButtonTapped:" destination="4AI-5x-hsM" eventType="touchUpInside" id="lol-bq-TUX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196078431371" green="0.97254901960784312" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZKb-t3-mxz" firstAttribute="centerX" secondItem="9xj-Iv-ZqG" secondAttribute="centerX" id="NJJ-nA-5LN"/>
+                            <constraint firstItem="ZKb-t3-mxz" firstAttribute="top" secondItem="9xj-Iv-ZqG" secondAttribute="bottom" constant="75" id="R3J-dx-a12"/>
+                            <constraint firstItem="9xj-Iv-ZqG" firstAttribute="top" secondItem="4z6-Ay-Wgb" secondAttribute="top" constant="75" id="SCh-Oj-IIx"/>
+                            <constraint firstItem="9xj-Iv-ZqG" firstAttribute="centerX" secondItem="4z6-Ay-Wgb" secondAttribute="centerX" id="Twx-7g-Nhx"/>
+                            <constraint firstItem="wGC-LD-LjL" firstAttribute="top" secondItem="ZKb-t3-mxz" secondAttribute="bottom" constant="45" id="UIJ-3h-CpW"/>
+                            <constraint firstItem="wGC-LD-LjL" firstAttribute="width" secondItem="ZKb-t3-mxz" secondAttribute="width" id="ibi-Qi-CBU"/>
+                            <constraint firstItem="wGC-LD-LjL" firstAttribute="centerX" secondItem="ZKb-t3-mxz" secondAttribute="centerX" id="y1F-Z9-jJM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4z6-Ay-Wgb"/>
+                    </view>
+                    <connections>
+                        <outlet property="hostButton" destination="ZKb-t3-mxz" id="mL8-jh-2F2"/>
+                        <outlet property="joinButton" destination="wGC-LD-LjL" id="eY8-HX-IGU"/>
+                        <segue destination="bgz-f3-0ZX" kind="presentation" identifier="jumpToLobby" id="Bx4-nt-ZVJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPR-qS-kQI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+        <!--Lobby-->
+        <scene sceneID="BNF-0M-aV5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Lobby" id="bgz-f3-0ZX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vex-O7-ITB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="run-cocroach" width="86.5" height="86.5"/>
+    </resources>
+</document>

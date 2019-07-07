@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1dX-N7-XUl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VIDEOPHREAK.ttf">
+            <string>Videophreak</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--BattleField-->
+        <scene sceneID="5We-7B-J9h">
+            <objects>
+                <viewController storyboardIdentifier="BattleFieldViewController" title="BattleField" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="BattleFieldViewController" customModule="Kill_The_Cockroach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rL-r6-A38">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xo5-ra-eAA">
+                                        <rect key="frame" x="0.0" y="0.0" width="175.5" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMX-pq-wvZ">
+                                                <rect key="frame" x="41.5" y="21" width="92.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="eMX-pq-wvZ" firstAttribute="centerY" secondItem="xo5-ra-eAA" secondAttribute="centerY" id="30T-Qj-gDW"/>
+                                            <constraint firstItem="eMX-pq-wvZ" firstAttribute="centerX" secondItem="xo5-ra-eAA" secondAttribute="centerX" id="7Tq-54-Kpu"/>
+                                            <constraint firstAttribute="height" constant="60" id="9Dm-wt-M61"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eMX-pq-wvZ" secondAttribute="trailing" constant="8" id="HcD-lG-SGt"/>
+                                            <constraint firstItem="eMX-pq-wvZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xo5-ra-eAA" secondAttribute="leading" constant="8" id="b9q-Dg-z4I"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="751" ambiguous="YES" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYz-AX-FU2">
+                                        <rect key="frame" x="175.5" y="0.0" width="24.5" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24.5" id="pj7-kY-6w2"/>
+                                            <constraint firstAttribute="height" constant="60" id="xyD-dy-ghR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwx-lk-qp4">
+                                        <rect key="frame" x="200" y="0.0" width="175" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRZ-aU-vsa">
+                                                <rect key="frame" x="27.5" y="21" width="120" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="pRZ-aU-vsa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mwx-lk-qp4" secondAttribute="leading" constant="8" id="9Nt-qx-SPN"/>
+                                            <constraint firstItem="pRZ-aU-vsa" firstAttribute="centerX" secondItem="mwx-lk-qp4" secondAttribute="centerX" id="AYS-gm-b5Z"/>
+                                            <constraint firstAttribute="height" constant="60" id="PNm-2l-ShA"/>
+                                            <constraint firstItem="pRZ-aU-vsa" firstAttribute="centerY" secondItem="mwx-lk-qp4" secondAttribute="centerY" id="Ttq-ei-SqE"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pRZ-aU-vsa" secondAttribute="trailing" constant="8" id="nHf-im-zTW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xo5-ra-eAA" secondAttribute="bottom" id="3xq-Oo-zWs"/>
+                                    <constraint firstAttribute="trailing" secondItem="mwx-lk-qp4" secondAttribute="trailing" id="5AI-tJ-kCh"/>
+                                    <constraint firstAttribute="bottom" secondItem="mwx-lk-qp4" secondAttribute="bottom" id="Ab9-Fp-3zd"/>
+                                    <constraint firstItem="mwx-lk-qp4" firstAttribute="leading" secondItem="CYz-AX-FU2" secondAttribute="trailing" id="Cii-Ka-Lgu"/>
+                                    <constraint firstItem="xo5-ra-eAA" firstAttribute="leading" secondItem="9rL-r6-A38" secondAttribute="leading" id="Q10-zy-2Hh"/>
+                                    <constraint firstItem="xo5-ra-eAA" firstAttribute="top" secondItem="9rL-r6-A38" secondAttribute="top" id="aZE-YZ-tGn"/>
+                                    <constraint firstItem="xo5-ra-eAA" firstAttribute="width" secondItem="mwx-lk-qp4" secondAttribute="width" id="h2W-sB-hVc"/>
+                                    <constraint firstItem="CYz-AX-FU2" firstAttribute="leading" secondItem="xo5-ra-eAA" secondAttribute="trailing" id="iRC-fo-Gy7"/>
+                                    <constraint firstItem="mwx-lk-qp4" firstAttribute="top" secondItem="9rL-r6-A38" secondAttribute="top" id="unI-6g-9m6"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="run-cocroach" translatesAutoresizingMaskIntoConstraints="NO" id="Z4x-9A-Fk6">
+                                <rect key="frame" x="67" y="147" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-Pr-Adv">
+                                <rect key="frame" x="132" y="347" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test Connection"/>
+                                <connections>
+                                    <action selector="onTestButtonPressed:" destination="1dX-N7-XUl" eventType="touchUpInside" id="BjF-l3-FyJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-Tq-C5n">
+                                <rect key="frame" x="166" y="70" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196079999999" green="0.97254901959999995" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="leading" secondItem="9rL-r6-A38" secondAttribute="leading" id="4DJ-G6-gsN"/>
+                            <constraint firstItem="9rL-r6-A38" firstAttribute="trailing" secondItem="DEK-3G-Vg1" secondAttribute="trailing" id="RkL-Ln-m71"/>
+                            <constraint firstItem="9rL-r6-A38" firstAttribute="bottom" secondItem="DEK-3G-Vg1" secondAttribute="bottom" id="j6u-kL-7Le"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
+                    </view>
+                    <connections>
+                        <outlet property="opponentNameLabel" destination="pRZ-aU-vsa" id="MKp-dp-D4z"/>
+                        <outlet property="playerNameLabel" destination="eMX-pq-wvZ" id="zjQ-1D-Cfo"/>
+                        <outlet property="statusLabel" destination="aeM-Tq-C5n" id="fVa-W4-ApS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977511244377816"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="run-cocroach" width="86.5" height="86.5"/>
+    </resources>
+</document>

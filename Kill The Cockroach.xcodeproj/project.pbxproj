@@ -8,20 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		1BE51A2622CF621A00FB552B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE51A2522CF621A00FB552B /* AppDelegate.swift */; };
-		1BE51A2822CF621A00FB552B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE51A2722CF621A00FB552B /* ViewController.swift */; };
-		1BE51A2B22CF621A00FB552B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2922CF621A00FB552B /* Main.storyboard */; };
 		1BE51A2D22CF621B00FB552B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2C22CF621B00FB552B /* Assets.xcassets */; };
 		1BE51A3022CF621B00FB552B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2E22CF621B00FB552B /* LaunchScreen.storyboard */; };
+		FF41A5FA22CFA65B00AC75BB /* VIDEOPHREAK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF41A5F922CFA65B00AC75BB /* VIDEOPHREAK.ttf */; };
+		FF41A60722CFA84600AC75BB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF41A60422CFA84500AC75BB /* Home.storyboard */; };
+		FF41A60822CFA84600AC75BB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A60522CFA84500AC75BB /* HomePresenter.swift */; };
+		FF41A60922CFA84600AC75BB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A60622CFA84500AC75BB /* HomeViewController.swift */; };
+		FF41A61622CFA8D800AC75BB /* BattleField.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF41A61322CFA8D800AC75BB /* BattleField.storyboard */; };
+		FF41A61722CFA8D800AC75BB /* BattleFieldPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A61422CFA8D800AC75BB /* BattleFieldPresenter.swift */; };
+		FF41A61822CFA8D800AC75BB /* BattleFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A61522CFA8D800AC75BB /* BattleFieldViewController.swift */; };
+		FF41A61C22CFA9A900AC75BB /* Lobby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF41A61922CFA9A900AC75BB /* Lobby.storyboard */; };
+		FF41A61D22CFA9A900AC75BB /* LobbyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A61A22CFA9A900AC75BB /* LobbyPresenter.swift */; };
+		FF41A61E22CFA9A900AC75BB /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A61B22CFA9A900AC75BB /* LobbyViewController.swift */; };
+		FF41A62122CFACAC00AC75BB /* EnumPlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A62022CFACAC00AC75BB /* EnumPlayerType.swift */; };
+		FF41A62422CFADFC00AC75BB /* SegueConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A62322CFADFC00AC75BB /* SegueConstants.swift */; };
+		FF41A62722CFAF0500AC75BB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A62622CFAF0500AC75BB /* BaseViewController.swift */; };
+		FF41A62A22CFB2E200AC75BB /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A62922CFB2E200AC75BB /* GameService.swift */; };
+		FF41A62D22CFB4A400AC75BB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A62C22CFB4A400AC75BB /* Player.swift */; };
+		FF41A62F22D0956C00AC75BB /* EnumPackageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A62E22D0956C00AC75BB /* EnumPackageType.swift */; };
+		FF41A63122D0961000AC75BB /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A63022D0961000AC75BB /* GamePlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1BE51A2222CF621A00FB552B /* Kill The Cockroach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kill The Cockroach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE51A2522CF621A00FB552B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BE51A2722CF621A00FB552B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1BE51A2A22CF621A00FB552B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BE51A2C22CF621B00FB552B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE51A2F22CF621B00FB552B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BE51A3122CF621B00FB552B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF41A5F922CFA65B00AC75BB /* VIDEOPHREAK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VIDEOPHREAK.ttf; sourceTree = "<group>"; };
+		FF41A60422CFA84500AC75BB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		FF41A60522CFA84500AC75BB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FF41A60622CFA84500AC75BB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FF41A61322CFA8D800AC75BB /* BattleField.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BattleField.storyboard; sourceTree = "<group>"; };
+		FF41A61422CFA8D800AC75BB /* BattleFieldPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleFieldPresenter.swift; sourceTree = "<group>"; };
+		FF41A61522CFA8D800AC75BB /* BattleFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleFieldViewController.swift; sourceTree = "<group>"; };
+		FF41A61922CFA9A900AC75BB /* Lobby.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lobby.storyboard; sourceTree = "<group>"; };
+		FF41A61A22CFA9A900AC75BB /* LobbyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyPresenter.swift; sourceTree = "<group>"; };
+		FF41A61B22CFA9A900AC75BB /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
+		FF41A62022CFACAC00AC75BB /* EnumPlayerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumPlayerType.swift; sourceTree = "<group>"; };
+		FF41A62322CFADFC00AC75BB /* SegueConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueConstants.swift; sourceTree = "<group>"; };
+		FF41A62622CFAF0500AC75BB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FF41A62922CFB2E200AC75BB /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		FF41A62C22CFB4A400AC75BB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FF41A62E22D0956C00AC75BB /* EnumPackageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumPackageType.swift; sourceTree = "<group>"; };
+		FF41A63022D0961000AC75BB /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +85,108 @@
 			isa = PBXGroup;
 			children = (
 				1BE51A2522CF621A00FB552B /* AppDelegate.swift */,
-				1BE51A2722CF621A00FB552B /* ViewController.swift */,
-				1BE51A2922CF621A00FB552B /* Main.storyboard */,
-				1BE51A2C22CF621B00FB552B /* Assets.xcassets */,
-				1BE51A2E22CF621B00FB552B /* LaunchScreen.storyboard */,
-				1BE51A3122CF621B00FB552B /* Info.plist */,
+				FF41A62222CFADE200AC75BB /* Constants */,
+				FF41A61F22CFAC3E00AC75BB /* Enumerations */,
+				FF41A62B22CFB49000AC75BB /* Models */,
+				FF41A5FB22CFA67200AC75BB /* Modules */,
+				FF41A62822CFB2B800AC75BB /* Services */,
+				FF41A5F822CFA64800AC75BB /* SupportFiles */,
 			);
 			path = "Kill The Cockroach";
+			sourceTree = "<group>";
+		};
+		FF41A5F822CFA64800AC75BB /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A62522CFAEEC00AC75BB /* Base */,
+				1BE51A3122CF621B00FB552B /* Info.plist */,
+				1BE51A2C22CF621B00FB552B /* Assets.xcassets */,
+				1BE51A2E22CF621B00FB552B /* LaunchScreen.storyboard */,
+				FF41A5F922CFA65B00AC75BB /* VIDEOPHREAK.ttf */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		FF41A5FB22CFA67200AC75BB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A61222CFA8BA00AC75BB /* BattleField */,
+				FF41A5FC22CFA68800AC75BB /* Home */,
+				FF41A5FD22CFA7F000AC75BB /* Lobby */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FF41A5FC22CFA68800AC75BB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A60422CFA84500AC75BB /* Home.storyboard */,
+				FF41A60522CFA84500AC75BB /* HomePresenter.swift */,
+				FF41A60622CFA84500AC75BB /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FF41A5FD22CFA7F000AC75BB /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A61922CFA9A900AC75BB /* Lobby.storyboard */,
+				FF41A61A22CFA9A900AC75BB /* LobbyPresenter.swift */,
+				FF41A61B22CFA9A900AC75BB /* LobbyViewController.swift */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		FF41A61222CFA8BA00AC75BB /* BattleField */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A61322CFA8D800AC75BB /* BattleField.storyboard */,
+				FF41A61422CFA8D800AC75BB /* BattleFieldPresenter.swift */,
+				FF41A61522CFA8D800AC75BB /* BattleFieldViewController.swift */,
+			);
+			path = BattleField;
+			sourceTree = "<group>";
+		};
+		FF41A61F22CFAC3E00AC75BB /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A62022CFACAC00AC75BB /* EnumPlayerType.swift */,
+				FF41A62E22D0956C00AC75BB /* EnumPackageType.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		FF41A62222CFADE200AC75BB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A62322CFADFC00AC75BB /* SegueConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FF41A62522CFAEEC00AC75BB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A62622CFAF0500AC75BB /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FF41A62822CFB2B800AC75BB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A62922CFB2E200AC75BB /* GameService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FF41A62B22CFB49000AC75BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF41A62C22CFB4A400AC75BB /* Player.swift */,
+				FF41A63022D0961000AC75BB /* GamePlay.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +247,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF41A61622CFA8D800AC75BB /* BattleField.storyboard in Resources */,
 				1BE51A3022CF621B00FB552B /* LaunchScreen.storyboard in Resources */,
+				FF41A5FA22CFA65B00AC75BB /* VIDEOPHREAK.ttf in Resources */,
 				1BE51A2D22CF621B00FB552B /* Assets.xcassets in Resources */,
-				1BE51A2B22CF621A00FB552B /* Main.storyboard in Resources */,
+				FF41A60722CFA84600AC75BB /* Home.storyboard in Resources */,
+				FF41A61C22CFA9A900AC75BB /* Lobby.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +263,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE51A2822CF621A00FB552B /* ViewController.swift in Sources */,
+				FF41A62A22CFB2E200AC75BB /* GameService.swift in Sources */,
+				FF41A61822CFA8D800AC75BB /* BattleFieldViewController.swift in Sources */,
+				FF41A62F22D0956C00AC75BB /* EnumPackageType.swift in Sources */,
+				FF41A61D22CFA9A900AC75BB /* LobbyPresenter.swift in Sources */,
+				FF41A60822CFA84600AC75BB /* HomePresenter.swift in Sources */,
+				FF41A62D22CFB4A400AC75BB /* Player.swift in Sources */,
+				FF41A62122CFACAC00AC75BB /* EnumPlayerType.swift in Sources */,
 				1BE51A2622CF621A00FB552B /* AppDelegate.swift in Sources */,
+				FF41A62722CFAF0500AC75BB /* BaseViewController.swift in Sources */,
+				FF41A61E22CFA9A900AC75BB /* LobbyViewController.swift in Sources */,
+				FF41A61722CFA8D800AC75BB /* BattleFieldPresenter.swift in Sources */,
+				FF41A60922CFA84600AC75BB /* HomeViewController.swift in Sources */,
+				FF41A62422CFADFC00AC75BB /* SegueConstants.swift in Sources */,
+				FF41A63122D0961000AC75BB /* GamePlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1BE51A2922CF621A00FB552B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BE51A2A22CF621A00FB552B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1BE51A2E22CF621B00FB552B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9GT4QP8FS;
-				INFOPLIST_FILE = "Kill The Cockroach/Info.plist";
+				INFOPLIST_FILE = "Kill The Cockroach/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9GT4QP8FS;
-				INFOPLIST_FILE = "Kill The Cockroach/Info.plist";
+				INFOPLIST_FILE = "Kill The Cockroach/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
