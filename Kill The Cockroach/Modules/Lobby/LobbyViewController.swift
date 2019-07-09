@@ -33,6 +33,7 @@ class LobbyViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == SegueConstants.Lobby.jumpToBattleField {
             let vc = segue.destination as! BattleFieldViewController
             vc.presenter.gameService = presenter.gameService

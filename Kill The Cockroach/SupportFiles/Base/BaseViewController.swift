@@ -7,7 +7,15 @@
 //
 
 import UIKit
+import AMPopTip
 
 class BaseViewController: UIViewController {
     
+    @discardableResult
+    func showAttackCommand(withView view: UIView, andTargetView targetView: UIView) -> PopTip {
+        let popTip = PopTip()
+        popTip.show(text: "Attack!", direction: .up, maxWidth: 200, in: view, from: targetView.globalFrame!, duration: nil)
+        
+        return popTip
+    }
 }

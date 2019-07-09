@@ -3,13 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B15043422D482E4000D1141 /* FinishBattle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B15043122D482E4000D1141 /* FinishBattle.storyboard */; };
+		1B15043522D482E4000D1141 /* FinishBattlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B15043222D482E4000D1141 /* FinishBattlePresenter.swift */; };
+		1B15043622D482E4000D1141 /* FinishBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B15043322D482E4000D1141 /* FinishBattleViewController.swift */; };
+		1B58AB7122D3269700C77FFD /* ObstacleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58AB6F22D3269700C77FFD /* ObstacleCollectionViewCell.swift */; };
+		1B58AB7222D3269700C77FFD /* ObstacleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7022D3269700C77FFD /* ObstacleCollectionViewCell.xib */; };
+		1B58AB9422D3283D00C77FFD /* bom-atom_23.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7522D3283D00C77FFD /* bom-atom_23.png */; };
+		1B58AB9522D3283D00C77FFD /* bom-atom_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7622D3283D00C77FFD /* bom-atom_22.png */; };
+		1B58AB9622D3283D00C77FFD /* bom-atom_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7722D3283D00C77FFD /* bom-atom_8.png */; };
+		1B58AB9722D3283D00C77FFD /* bom-atom_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7822D3283D00C77FFD /* bom-atom_20.png */; };
+		1B58AB9822D3283D00C77FFD /* bom-atom_21.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7922D3283D00C77FFD /* bom-atom_21.png */; };
+		1B58AB9922D3283D00C77FFD /* bom-atom_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7A22D3283D00C77FFD /* bom-atom_9.png */; };
+		1B58AB9A22D3283D00C77FFD /* bom-atom_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7B22D3283D00C77FFD /* bom-atom_25.png */; };
+		1B58AB9B22D3283D00C77FFD /* bom-atom_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7C22D3283D00C77FFD /* bom-atom_19.png */; };
+		1B58AB9C22D3283D00C77FFD /* bom-atom_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7D22D3283D00C77FFD /* bom-atom_18.png */; };
+		1B58AB9D22D3283D00C77FFD /* bom-atom_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7E22D3283D00C77FFD /* bom-atom_24.png */; };
+		1B58AB9E22D3283D00C77FFD /* bom-atom_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB7F22D3283D00C77FFD /* bom-atom_2.png */; };
+		1B58AB9F22D3283D00C77FFD /* bom-atom_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8022D3283D00C77FFD /* bom-atom_16.png */; };
+		1B58ABA022D3283D00C77FFD /* bom-atom_17.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8122D3283D00C77FFD /* bom-atom_17.png */; };
+		1B58ABA122D3283D00C77FFD /* bom-atom_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8222D3283D00C77FFD /* bom-atom_3.png */; };
+		1B58ABA222D3283D00C77FFD /* bom-atom_15.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8322D3283D00C77FFD /* bom-atom_15.png */; };
+		1B58ABA322D3283D00C77FFD /* bom-atom_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8422D3283D00C77FFD /* bom-atom_1.png */; };
+		1B58ABA422D3283D00C77FFD /* bom-atom_14.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8522D3283D00C77FFD /* bom-atom_14.png */; };
+		1B58ABA522D3283D00C77FFD /* bom-atom_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8622D3283D00C77FFD /* bom-atom_10.png */; };
+		1B58ABA622D3283D00C77FFD /* bom-atom_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8722D3283D00C77FFD /* bom-atom_4.png */; };
+		1B58ABA722D3283D00C77FFD /* bom-atom_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8822D3283D00C77FFD /* bom-atom_5.png */; };
+		1B58ABA822D3283D00C77FFD /* bom-atom_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8922D3283D00C77FFD /* bom-atom_11.png */; };
+		1B58ABA922D3283D00C77FFD /* bom-atom_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8A22D3283D00C77FFD /* bom-atom_7.png */; };
+		1B58ABAA22D3283D00C77FFD /* bom-atom_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8B22D3283D00C77FFD /* bom-atom_13.png */; };
+		1B58ABAB22D3283D00C77FFD /* bom-atom_12.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8C22D3283D00C77FFD /* bom-atom_12.png */; };
+		1B58ABAC22D3283D00C77FFD /* bom-atom_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58AB8D22D3283D00C77FFD /* bom-atom_6.png */; };
+		1B58ABB422D3403200C77FFD /* UIView+GlobalFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58ABB322D3403200C77FFD /* UIView+GlobalFrame.swift */; };
+		1B58ABBA22D3498700C77FFD /* tree-sprites_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB522D3498700C77FFD /* tree-sprites_2.png */; };
+		1B58ABBB22D3498700C77FFD /* tree-sprites_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB622D3498700C77FFD /* tree-sprites_1.png */; };
+		1B58ABBC22D3498700C77FFD /* tree-sprites_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB722D3498700C77FFD /* tree-sprites_5.png */; };
+		1B58ABBD22D3498700C77FFD /* tree-sprites_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB822D3498700C77FFD /* tree-sprites_4.png */; };
+		1B58ABBE22D3498700C77FFD /* tree-sprites_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB922D3498700C77FFD /* tree-sprites_3.png */; };
 		1BE51A2622CF621A00FB552B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE51A2522CF621A00FB552B /* AppDelegate.swift */; };
 		1BE51A2D22CF621B00FB552B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2C22CF621B00FB552B /* Assets.xcassets */; };
 		1BE51A3022CF621B00FB552B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2E22CF621B00FB552B /* LaunchScreen.storyboard */; };
+		2B07058BF74018F2A965DE7E /* Pods_Kill_The_Cockroach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D14CE411B58987E3189120D /* Pods_Kill_The_Cockroach.framework */; };
 		FF41A5FA22CFA65B00AC75BB /* VIDEOPHREAK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF41A5F922CFA65B00AC75BB /* VIDEOPHREAK.ttf */; };
 		FF41A60722CFA84600AC75BB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF41A60422CFA84500AC75BB /* Home.storyboard */; };
 		FF41A60822CFA84600AC75BB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A60522CFA84500AC75BB /* HomePresenter.swift */; };
@@ -30,11 +67,50 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B15043122D482E4000D1141 /* FinishBattle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinishBattle.storyboard; sourceTree = "<group>"; };
+		1B15043222D482E4000D1141 /* FinishBattlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishBattlePresenter.swift; sourceTree = "<group>"; };
+		1B15043322D482E4000D1141 /* FinishBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishBattleViewController.swift; sourceTree = "<group>"; };
+		1B58AB6F22D3269700C77FFD /* ObstacleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B58AB7022D3269700C77FFD /* ObstacleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObstacleCollectionViewCell.xib; sourceTree = "<group>"; };
+		1B58AB7522D3283D00C77FFD /* bom-atom_23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_23.png"; sourceTree = "<group>"; };
+		1B58AB7622D3283D00C77FFD /* bom-atom_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_22.png"; sourceTree = "<group>"; };
+		1B58AB7722D3283D00C77FFD /* bom-atom_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_8.png"; sourceTree = "<group>"; };
+		1B58AB7822D3283D00C77FFD /* bom-atom_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_20.png"; sourceTree = "<group>"; };
+		1B58AB7922D3283D00C77FFD /* bom-atom_21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_21.png"; sourceTree = "<group>"; };
+		1B58AB7A22D3283D00C77FFD /* bom-atom_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_9.png"; sourceTree = "<group>"; };
+		1B58AB7B22D3283D00C77FFD /* bom-atom_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_25.png"; sourceTree = "<group>"; };
+		1B58AB7C22D3283D00C77FFD /* bom-atom_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_19.png"; sourceTree = "<group>"; };
+		1B58AB7D22D3283D00C77FFD /* bom-atom_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_18.png"; sourceTree = "<group>"; };
+		1B58AB7E22D3283D00C77FFD /* bom-atom_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_24.png"; sourceTree = "<group>"; };
+		1B58AB7F22D3283D00C77FFD /* bom-atom_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_2.png"; sourceTree = "<group>"; };
+		1B58AB8022D3283D00C77FFD /* bom-atom_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_16.png"; sourceTree = "<group>"; };
+		1B58AB8122D3283D00C77FFD /* bom-atom_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_17.png"; sourceTree = "<group>"; };
+		1B58AB8222D3283D00C77FFD /* bom-atom_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_3.png"; sourceTree = "<group>"; };
+		1B58AB8322D3283D00C77FFD /* bom-atom_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_15.png"; sourceTree = "<group>"; };
+		1B58AB8422D3283D00C77FFD /* bom-atom_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_1.png"; sourceTree = "<group>"; };
+		1B58AB8522D3283D00C77FFD /* bom-atom_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_14.png"; sourceTree = "<group>"; };
+		1B58AB8622D3283D00C77FFD /* bom-atom_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_10.png"; sourceTree = "<group>"; };
+		1B58AB8722D3283D00C77FFD /* bom-atom_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_4.png"; sourceTree = "<group>"; };
+		1B58AB8822D3283D00C77FFD /* bom-atom_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_5.png"; sourceTree = "<group>"; };
+		1B58AB8922D3283D00C77FFD /* bom-atom_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_11.png"; sourceTree = "<group>"; };
+		1B58AB8A22D3283D00C77FFD /* bom-atom_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_7.png"; sourceTree = "<group>"; };
+		1B58AB8B22D3283D00C77FFD /* bom-atom_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_13.png"; sourceTree = "<group>"; };
+		1B58AB8C22D3283D00C77FFD /* bom-atom_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_12.png"; sourceTree = "<group>"; };
+		1B58AB8D22D3283D00C77FFD /* bom-atom_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bom-atom_6.png"; sourceTree = "<group>"; };
+		1B58ABB322D3403200C77FFD /* UIView+GlobalFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GlobalFrame.swift"; sourceTree = "<group>"; };
+		1B58ABB522D3498700C77FFD /* tree-sprites_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_2.png"; sourceTree = "<group>"; };
+		1B58ABB622D3498700C77FFD /* tree-sprites_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_1.png"; sourceTree = "<group>"; };
+		1B58ABB722D3498700C77FFD /* tree-sprites_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_5.png"; sourceTree = "<group>"; };
+		1B58ABB822D3498700C77FFD /* tree-sprites_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_4.png"; sourceTree = "<group>"; };
+		1B58ABB922D3498700C77FFD /* tree-sprites_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_3.png"; sourceTree = "<group>"; };
 		1BE51A2222CF621A00FB552B /* Kill The Cockroach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kill The Cockroach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE51A2522CF621A00FB552B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE51A2C22CF621B00FB552B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE51A2F22CF621B00FB552B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BE51A3122CF621B00FB552B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D14CE411B58987E3189120D /* Pods_Kill_The_Cockroach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kill_The_Cockroach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3ADA4E20AD850B138AE9B9 /* Pods-Kill The Cockroach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kill The Cockroach.debug.xcconfig"; path = "Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach.debug.xcconfig"; sourceTree = "<group>"; };
+		EED9AF5DDBAE80BE90DD0D26 /* Pods-Kill The Cockroach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kill The Cockroach.release.xcconfig"; path = "Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach.release.xcconfig"; sourceTree = "<group>"; };
 		FF41A5F922CFA65B00AC75BB /* VIDEOPHREAK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VIDEOPHREAK.ttf; sourceTree = "<group>"; };
 		FF41A60422CFA84500AC75BB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		FF41A60522CFA84500AC75BB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -59,17 +135,100 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B07058BF74018F2A965DE7E /* Pods_Kill_The_Cockroach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B15043022D4825C000D1141 /* FinishBattle */ = {
+			isa = PBXGroup;
+			children = (
+				1B15043122D482E4000D1141 /* FinishBattle.storyboard */,
+				1B15043222D482E4000D1141 /* FinishBattlePresenter.swift */,
+				1B15043322D482E4000D1141 /* FinishBattleViewController.swift */,
+			);
+			path = FinishBattle;
+			sourceTree = "<group>";
+		};
+		1B58AB6E22D3267500C77FFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1B58AB6F22D3269700C77FFD /* ObstacleCollectionViewCell.swift */,
+				1B58AB7022D3269700C77FFD /* ObstacleCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1B58AB7322D3282100C77FFD /* SpriteImages */ = {
+			isa = PBXGroup;
+			children = (
+				1B58AB7422D3283D00C77FFD /* bom-atom-sprites */,
+				1B58AB8E22D3283D00C77FFD /* tree-sprites */,
+			);
+			path = SpriteImages;
+			sourceTree = "<group>";
+		};
+		1B58AB7422D3283D00C77FFD /* bom-atom-sprites */ = {
+			isa = PBXGroup;
+			children = (
+				1B58AB8422D3283D00C77FFD /* bom-atom_1.png */,
+				1B58AB7F22D3283D00C77FFD /* bom-atom_2.png */,
+				1B58AB8222D3283D00C77FFD /* bom-atom_3.png */,
+				1B58AB8722D3283D00C77FFD /* bom-atom_4.png */,
+				1B58AB8822D3283D00C77FFD /* bom-atom_5.png */,
+				1B58AB8D22D3283D00C77FFD /* bom-atom_6.png */,
+				1B58AB8A22D3283D00C77FFD /* bom-atom_7.png */,
+				1B58AB7722D3283D00C77FFD /* bom-atom_8.png */,
+				1B58AB7A22D3283D00C77FFD /* bom-atom_9.png */,
+				1B58AB8622D3283D00C77FFD /* bom-atom_10.png */,
+				1B58AB8922D3283D00C77FFD /* bom-atom_11.png */,
+				1B58AB8C22D3283D00C77FFD /* bom-atom_12.png */,
+				1B58AB8B22D3283D00C77FFD /* bom-atom_13.png */,
+				1B58AB8522D3283D00C77FFD /* bom-atom_14.png */,
+				1B58AB8322D3283D00C77FFD /* bom-atom_15.png */,
+				1B58AB8022D3283D00C77FFD /* bom-atom_16.png */,
+				1B58AB8122D3283D00C77FFD /* bom-atom_17.png */,
+				1B58AB7D22D3283D00C77FFD /* bom-atom_18.png */,
+				1B58AB7C22D3283D00C77FFD /* bom-atom_19.png */,
+				1B58AB7822D3283D00C77FFD /* bom-atom_20.png */,
+				1B58AB7922D3283D00C77FFD /* bom-atom_21.png */,
+				1B58AB7622D3283D00C77FFD /* bom-atom_22.png */,
+				1B58AB7522D3283D00C77FFD /* bom-atom_23.png */,
+				1B58AB7E22D3283D00C77FFD /* bom-atom_24.png */,
+				1B58AB7B22D3283D00C77FFD /* bom-atom_25.png */,
+			);
+			path = "bom-atom-sprites";
+			sourceTree = "<group>";
+		};
+		1B58AB8E22D3283D00C77FFD /* tree-sprites */ = {
+			isa = PBXGroup;
+			children = (
+				1B58ABB622D3498700C77FFD /* tree-sprites_1.png */,
+				1B58ABB522D3498700C77FFD /* tree-sprites_2.png */,
+				1B58ABB922D3498700C77FFD /* tree-sprites_3.png */,
+				1B58ABB822D3498700C77FFD /* tree-sprites_4.png */,
+				1B58ABB722D3498700C77FFD /* tree-sprites_5.png */,
+			);
+			path = "tree-sprites";
+			sourceTree = "<group>";
+		};
+		1B58ABB222D3401300C77FFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B58ABB322D3403200C77FFD /* UIView+GlobalFrame.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1BE51A1922CF621A00FB552B = {
 			isa = PBXGroup;
 			children = (
 				1BE51A2422CF621A00FB552B /* Kill The Cockroach */,
 				1BE51A2322CF621A00FB552B /* Products */,
+				BD3C6606510E50E82134B44D /* Pods */,
+				32A535ED6778F449985AD07F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +246,7 @@
 				1BE51A2522CF621A00FB552B /* AppDelegate.swift */,
 				FF41A62222CFADE200AC75BB /* Constants */,
 				FF41A61F22CFAC3E00AC75BB /* Enumerations */,
+				1B58ABB222D3401300C77FFD /* Extensions */,
 				FF41A62B22CFB49000AC75BB /* Models */,
 				FF41A5FB22CFA67200AC75BB /* Modules */,
 				FF41A62822CFB2B800AC75BB /* Services */,
@@ -95,9 +255,27 @@
 			path = "Kill The Cockroach";
 			sourceTree = "<group>";
 		};
+		32A535ED6778F449985AD07F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D14CE411B58987E3189120D /* Pods_Kill_The_Cockroach.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD3C6606510E50E82134B44D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE3ADA4E20AD850B138AE9B9 /* Pods-Kill The Cockroach.debug.xcconfig */,
+				EED9AF5DDBAE80BE90DD0D26 /* Pods-Kill The Cockroach.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FF41A5F822CFA64800AC75BB /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1B58AB7322D3282100C77FFD /* SpriteImages */,
 				FF41A62522CFAEEC00AC75BB /* Base */,
 				1BE51A3122CF621B00FB552B /* Info.plist */,
 				1BE51A2C22CF621B00FB552B /* Assets.xcassets */,
@@ -110,6 +288,7 @@
 		FF41A5FB22CFA67200AC75BB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1B15043022D4825C000D1141 /* FinishBattle */,
 				FF41A61222CFA8BA00AC75BB /* BattleField */,
 				FF41A5FC22CFA68800AC75BB /* Home */,
 				FF41A5FD22CFA7F000AC75BB /* Lobby */,
@@ -143,6 +322,7 @@
 				FF41A61322CFA8D800AC75BB /* BattleField.storyboard */,
 				FF41A61422CFA8D800AC75BB /* BattleFieldPresenter.swift */,
 				FF41A61522CFA8D800AC75BB /* BattleFieldViewController.swift */,
+				1B58AB6E22D3267500C77FFD /* Cells */,
 			);
 			path = BattleField;
 			sourceTree = "<group>";
@@ -196,9 +376,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BE51A3422CF621B00FB552B /* Build configuration list for PBXNativeTarget "Kill The Cockroach" */;
 			buildPhases = (
+				7808C8DB73A43A06E0384D55 /* [CP] Check Pods Manifest.lock */,
 				1BE51A1E22CF621A00FB552B /* Sources */,
 				1BE51A1F22CF621A00FB552B /* Frameworks */,
 				1BE51A2022CF621A00FB552B /* Resources */,
+				3BBDAA5678CBD6D30DE9515F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,15 +430,89 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF41A61622CFA8D800AC75BB /* BattleField.storyboard in Resources */,
+				1B58ABBC22D3498700C77FFD /* tree-sprites_5.png in Resources */,
+				1B58ABA022D3283D00C77FFD /* bom-atom_17.png in Resources */,
+				1B58AB9D22D3283D00C77FFD /* bom-atom_24.png in Resources */,
+				1B58ABAC22D3283D00C77FFD /* bom-atom_6.png in Resources */,
+				1B58ABAB22D3283D00C77FFD /* bom-atom_12.png in Resources */,
+				1B58ABA622D3283D00C77FFD /* bom-atom_4.png in Resources */,
+				1B58ABA522D3283D00C77FFD /* bom-atom_10.png in Resources */,
+				1B58ABBD22D3498700C77FFD /* tree-sprites_4.png in Resources */,
 				1BE51A3022CF621B00FB552B /* LaunchScreen.storyboard in Resources */,
+				1B58AB9422D3283D00C77FFD /* bom-atom_23.png in Resources */,
+				1B58ABA222D3283D00C77FFD /* bom-atom_15.png in Resources */,
 				FF41A5FA22CFA65B00AC75BB /* VIDEOPHREAK.ttf in Resources */,
+				1B58AB9F22D3283D00C77FFD /* bom-atom_16.png in Resources */,
+				1B58ABA122D3283D00C77FFD /* bom-atom_3.png in Resources */,
+				1B58AB9B22D3283D00C77FFD /* bom-atom_19.png in Resources */,
+				1B58ABA422D3283D00C77FFD /* bom-atom_14.png in Resources */,
+				1B58AB9822D3283D00C77FFD /* bom-atom_21.png in Resources */,
+				1B58AB9E22D3283D00C77FFD /* bom-atom_2.png in Resources */,
+				1B58AB9C22D3283D00C77FFD /* bom-atom_18.png in Resources */,
+				1B58ABA722D3283D00C77FFD /* bom-atom_5.png in Resources */,
+				1B58AB7222D3269700C77FFD /* ObstacleCollectionViewCell.xib in Resources */,
+				1B58AB9A22D3283D00C77FFD /* bom-atom_25.png in Resources */,
+				1B58ABA822D3283D00C77FFD /* bom-atom_11.png in Resources */,
+				1B58AB9722D3283D00C77FFD /* bom-atom_20.png in Resources */,
 				1BE51A2D22CF621B00FB552B /* Assets.xcassets in Resources */,
+				1B58ABA922D3283D00C77FFD /* bom-atom_7.png in Resources */,
+				1B58ABBE22D3498700C77FFD /* tree-sprites_3.png in Resources */,
+				1B58ABA322D3283D00C77FFD /* bom-atom_1.png in Resources */,
+				1B15043422D482E4000D1141 /* FinishBattle.storyboard in Resources */,
+				1B58AB9922D3283D00C77FFD /* bom-atom_9.png in Resources */,
+				1B58ABAA22D3283D00C77FFD /* bom-atom_13.png in Resources */,
 				FF41A60722CFA84600AC75BB /* Home.storyboard in Resources */,
+				1B58ABBA22D3498700C77FFD /* tree-sprites_2.png in Resources */,
+				1B58AB9622D3283D00C77FFD /* bom-atom_8.png in Resources */,
+				1B58ABBB22D3498700C77FFD /* tree-sprites_1.png in Resources */,
+				1B58AB9522D3283D00C77FFD /* bom-atom_22.png in Resources */,
 				FF41A61C22CFA9A900AC75BB /* Lobby.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BBDAA5678CBD6D30DE9515F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7808C8DB73A43A06E0384D55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kill The Cockroach-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BE51A1E22CF621A00FB552B /* Sources */ = {
@@ -264,9 +520,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF41A62A22CFB2E200AC75BB /* GameService.swift in Sources */,
+				1B58AB7122D3269700C77FFD /* ObstacleCollectionViewCell.swift in Sources */,
 				FF41A61822CFA8D800AC75BB /* BattleFieldViewController.swift in Sources */,
+				1B58ABB422D3403200C77FFD /* UIView+GlobalFrame.swift in Sources */,
 				FF41A62F22D0956C00AC75BB /* EnumPackageType.swift in Sources */,
 				FF41A61D22CFA9A900AC75BB /* LobbyPresenter.swift in Sources */,
+				1B15043622D482E4000D1141 /* FinishBattleViewController.swift in Sources */,
 				FF41A60822CFA84600AC75BB /* HomePresenter.swift in Sources */,
 				FF41A62D22CFB4A400AC75BB /* Player.swift in Sources */,
 				FF41A62122CFACAC00AC75BB /* EnumPlayerType.swift in Sources */,
@@ -274,6 +533,7 @@
 				FF41A62722CFAF0500AC75BB /* BaseViewController.swift in Sources */,
 				FF41A61E22CFA9A900AC75BB /* LobbyViewController.swift in Sources */,
 				FF41A61722CFA8D800AC75BB /* BattleFieldPresenter.swift in Sources */,
+				1B15043522D482E4000D1141 /* FinishBattlePresenter.swift in Sources */,
 				FF41A60922CFA84600AC75BB /* HomeViewController.swift in Sources */,
 				FF41A62422CFADFC00AC75BB /* SegueConstants.swift in Sources */,
 				FF41A63122D0961000AC75BB /* GamePlay.swift in Sources */,
@@ -412,6 +672,7 @@
 		};
 		1BE51A3522CF621B00FB552B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE3ADA4E20AD850B138AE9B9 /* Pods-Kill The Cockroach.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -424,12 +685,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fadielse.Kill-The-Cockroach";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1BE51A3622CF621B00FB552B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EED9AF5DDBAE80BE90DD0D26 /* Pods-Kill The Cockroach.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,7 +704,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fadielse.Kill-The-Cockroach";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

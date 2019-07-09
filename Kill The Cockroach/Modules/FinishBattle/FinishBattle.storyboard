@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1dX-N7-XUl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VIDEOPHREAK.ttf">
+            <string>Videophreak</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--FinishBattle-->
+        <scene sceneID="5We-7B-J9h">
+            <objects>
+                <viewController storyboardIdentifier="FinishBattleViewController" title="FinishBattle" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1dX-N7-XUl" customClass="FinishBattleViewController" customModule="Kill_The_Cockroach" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1aI-fb-72i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-cq-HXO">
+                                <rect key="frame" x="47.5" y="163.5" width="280" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU WIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-uS-EV8">
+                                        <rect key="frame" x="75" y="16" width="130" height="35"/>
+                                        <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="27"/>
+                                        <color key="textColor" red="0.5" green="0.46713776843098581" blue="0.052720350943661974" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-OE-sTc">
+                                        <rect key="frame" x="110" y="103" width="60" height="41"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.82745098039999998" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="h1h-jW-PrK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="22"/>
+                                        <state key="normal" title="Exit"/>
+                                        <connections>
+                                            <action selector="onExitButtonPressed:" destination="1dX-N7-XUl" eventType="touchUpInside" id="4Sn-oC-GlE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="5G3-Ql-JaY"/>
+                                    <constraint firstItem="dTg-OE-sTc" firstAttribute="centerX" secondItem="VDA-cq-HXO" secondAttribute="centerX" id="Uo6-AM-cDF"/>
+                                    <constraint firstAttribute="width" constant="280" id="gT6-ND-mMb"/>
+                                    <constraint firstItem="7ot-uS-EV8" firstAttribute="top" secondItem="VDA-cq-HXO" secondAttribute="top" constant="16" id="kGB-PH-0I1"/>
+                                    <constraint firstItem="7ot-uS-EV8" firstAttribute="centerX" secondItem="VDA-cq-HXO" secondAttribute="centerX" id="ooF-yg-Mty"/>
+                                    <constraint firstAttribute="bottom" secondItem="dTg-OE-sTc" secondAttribute="bottom" constant="16" id="vKY-nT-AKG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.20152948943661972" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VDA-cq-HXO" firstAttribute="centerX" secondItem="DEK-3G-Vg1" secondAttribute="centerX" id="HxW-Aq-Cso"/>
+                            <constraint firstItem="VDA-cq-HXO" firstAttribute="centerY" secondItem="DEK-3G-Vg1" secondAttribute="centerY" constant="-100" id="XHS-1v-H82"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="7ot-uS-EV8" id="wTZ-Wf-cTn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

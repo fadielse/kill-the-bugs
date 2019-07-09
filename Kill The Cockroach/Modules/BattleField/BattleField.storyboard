@@ -23,6 +23,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OFG-rq-ccy">
+                                <rect key="frame" x="16" y="39" width="343" height="533"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="JKV-XP-OTo">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rL-r6-A38">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
@@ -30,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="175.5" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMX-pq-wvZ">
-                                                <rect key="frame" x="41.5" y="21" width="92.5" height="18.5"/>
+                                                <rect key="frame" x="47.5" y="22" width="80" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -59,7 +70,7 @@
                                         <rect key="frame" x="200" y="0.0" width="175" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRZ-aU-vsa">
-                                                <rect key="frame" x="27.5" y="21" width="120" height="18.5"/>
+                                                <rect key="frame" x="35.5" y="22" width="104" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -88,46 +99,49 @@
                                     <constraint firstItem="mwx-lk-qp4" firstAttribute="top" secondItem="9rL-r6-A38" secondAttribute="top" id="unI-6g-9m6"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="run-cocroach" translatesAutoresizingMaskIntoConstraints="NO" id="Z4x-9A-Fk6">
-                                <rect key="frame" x="67" y="147" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missile" translatesAutoresizingMaskIntoConstraints="NO" id="ga1-M8-uvR">
+                                <rect key="frame" x="179.5" y="667" width="16" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="MdQ-zt-VQy"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNZ-Pr-Adv">
-                                <rect key="frame" x="132" y="347" width="112" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Test Connection"/>
-                                <connections>
-                                    <action selector="onTestButtonPressed:" destination="1dX-N7-XUl" eventType="touchUpInside" id="BjF-l3-FyJ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeM-Tq-C5n">
-                                <rect key="frame" x="166" y="70" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.25490196079999999" green="0.97254901959999995" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.5490196078431373" green="0.54117647058823526" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ga1-M8-uvR" firstAttribute="centerX" secondItem="DEK-3G-Vg1" secondAttribute="centerX" id="1D9-vP-LGS"/>
                             <constraint firstItem="DEK-3G-Vg1" firstAttribute="leading" secondItem="9rL-r6-A38" secondAttribute="leading" id="4DJ-G6-gsN"/>
+                            <constraint firstItem="9rL-r6-A38" firstAttribute="top" secondItem="OFG-rq-ccy" secondAttribute="bottom" constant="35" id="7J3-A6-Ohv"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="OFG-rq-ccy" secondAttribute="trailing" constant="16" id="AQL-gQ-zb7"/>
                             <constraint firstItem="9rL-r6-A38" firstAttribute="trailing" secondItem="DEK-3G-Vg1" secondAttribute="trailing" id="RkL-Ln-m71"/>
+                            <constraint firstItem="OFG-rq-ccy" firstAttribute="top" secondItem="DEK-3G-Vg1" secondAttribute="top" constant="19" id="dl8-uy-awN"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="bottom" secondItem="ga1-M8-uvR" secondAttribute="bottom" constant="-128" id="f6n-vw-x9k"/>
+                            <constraint firstItem="OFG-rq-ccy" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" constant="16" id="hEO-cr-p2A"/>
                             <constraint firstItem="9rL-r6-A38" firstAttribute="bottom" secondItem="DEK-3G-Vg1" secondAttribute="bottom" id="j6u-kL-7Le"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="OFG-rq-ccy" id="QUR-WE-nwf"/>
+                        <outlet property="missileImage" destination="ga1-M8-uvR" id="yUP-ey-Sa7"/>
                         <outlet property="opponentNameLabel" destination="pRZ-aU-vsa" id="MKp-dp-D4z"/>
                         <outlet property="playerNameLabel" destination="eMX-pq-wvZ" id="zjQ-1D-Cfo"/>
-                        <outlet property="statusLabel" destination="aeM-Tq-C5n" id="fVa-W4-ApS"/>
+                        <segue destination="JiI-sI-vO4" kind="presentation" identifier="ShowFinishPopup" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="of1-8D-JZe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977511244377816"/>
         </scene>
+        <!--FinishBattle-->
+        <scene sceneID="Gel-Va-Zkz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FinishBattle" id="JiI-sI-vO4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6L3-jG-aQ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="2"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="run-cocroach" width="86.5" height="86.5"/>
+        <image name="missile" width="52" height="197"/>
     </resources>
 </document>
