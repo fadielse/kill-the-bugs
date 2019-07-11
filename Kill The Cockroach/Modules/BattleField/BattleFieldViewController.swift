@@ -85,15 +85,17 @@ extension BattleFieldViewController {
         let animation = CAKeyframeAnimation(keyPath: "position")
         animation.path = path.cgPath
         animation.repeatCount = 0
-        animation.duration = 2.0
+        animation.duration = 0.5
         
+        missileImage.isHidden = false
         missileImage.layer.add(animation, forKey: "animate rocket move to target")
         missileImage.center = target
         
-        UIView.animate(withDuration: 2.1, animations: {
+        UIView.animate(withDuration: 0.6, animations: {
             self.missileImage.transform = CGAffineTransform.identity.scaledBy(x: 0.7, y: 0.7)
         }) { (success) in
             self.missileImage.transform =  .identity
+            self.missileImage.isHidden = true
             self.animateExplodeCell()
         }
     }
@@ -107,13 +109,16 @@ extension BattleFieldViewController {
                 cell.obstacleImage.image = UIImage(named: "dead-cockroach")
                 cell.obstacleImage.contentMode = .scaleAspectFit
                 
-                let deadlineTime = DispatchTime.now() + .seconds(3)
+                let deadlineTime = DispatchTime.now() + .milliseconds(1200)
                 DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
                     self.matchEnded()
                     self.presenter.sendDeclarationOfVictory()
                 }
             } else {
-                presenter.sendSwitchPlayer()
+                let deadlineTime = DispatchTime.now() + .milliseconds(1300)
+                DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                    self.presenter.sendSwitchPlayer()
+                }
             }
         }
     }
@@ -159,7 +164,10 @@ extension BattleFieldViewController: GameServiceBattleDelegate {
             case .declarationOfVictory:
                 print("Receive declarationOfVictory package")
                 presenter.setReceiveDeclarationVictory(true)
-                self.matchEnded()
+                
+                DispatchQueue.main.async {
+                    self.matchEnded()
+                }
             }
         }
         catch {
@@ -170,7 +178,7 @@ extension BattleFieldViewController: GameServiceBattleDelegate {
 
 extension BattleFieldViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
+        return 30
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -180,7 +188,7 @@ extension BattleFieldViewController: UICollectionViewDelegate, UICollectionViewD
             cell.aimImage.isHidden = !(selectedIndex == indexPath.row)
         }
         
-        if presenter.obstacleCells.count < 40 {
+        if presenter.obstacleCells.count < 30 {
             presenter.obstacleCells.append(cell)
         }
         
@@ -188,7 +196,7 @@ extension BattleFieldViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / 5, height: collectionView.frame.height / 8)
+        return CGSize(width: collectionView.frame.width / 5, height: collectionView.frame.height / 6)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

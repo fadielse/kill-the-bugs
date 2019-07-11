@@ -19,7 +19,9 @@ extension SegueConstants {
 class LobbyViewController: BaseViewController {
     
     // MARK: Properties
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var startHostButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -56,11 +58,18 @@ class LobbyViewController: BaseViewController {
     }
     
     @IBAction func onStartHostButtonTapped(_ sender: Any) {
-        presenter.startHost()
+        if let name = nameLabel.text, !name.isEmpty {
+            presenter.startHost()
+        } else {
+            nameLabel.becomeFirstResponder()
+        }
     }
     
     func setupView() {
+        setupCloseButton()
+        setupNameLabel()
         setupTableView()
+        setupStartButton()
         
         switch presenter.getPlayerType() {
         case .host:
@@ -70,9 +79,23 @@ class LobbyViewController: BaseViewController {
         }
     }
     
+    func setupCloseButton() {
+        closeButton.setImage(#imageLiteral(resourceName: "close-button-normal"), for: .normal)
+        closeButton.setImage(#imageLiteral(resourceName: "close-button-click"), for: .highlighted)
+    }
+    
+    func setupNameLabel() {
+        nameLabel.delegate = self
+    }
+    
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func setupStartButton() {
+        startHostButton.setImage(#imageLiteral(resourceName: "start-button-disable"), for: .normal)
+        startHostButton.setImage(#imageLiteral(resourceName: "start-button-click"), for: .highlighted)
     }
     
     func updateViewAsHost() {
@@ -94,6 +117,16 @@ class LobbyViewController: BaseViewController {
 
 extension LobbyViewController: LobbyView {
     // TODO: implement view methods
+}
+
+extension LobbyViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let name = nameLabel.text, !name.isEmpty {
+            startHostButton.setImage(#imageLiteral(resourceName: "start-button-normal"), for: .normal)
+        } else {
+            setupStartButton()
+        }
+    }
 }
 
 extension LobbyViewController: GameServiceDelegate {

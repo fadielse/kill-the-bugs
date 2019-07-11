@@ -30,7 +30,7 @@ class ObstacleCollectionViewCell: UICollectionViewCell {
         }
         
         obstacleImage.animationImages = images
-        obstacleImage.animationDuration = 2.5
+        obstacleImage.animationDuration = 1.2
         obstacleImage.animationRepeatCount = 1
     }
 

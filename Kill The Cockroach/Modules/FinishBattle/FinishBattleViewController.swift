@@ -19,6 +19,7 @@ class FinishBattleViewController: BaseViewController {
     
     // MARK: Properties
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var exitButton: UIButton!
     
     var presenter: FinishBattlePresenter!
     
@@ -31,8 +32,15 @@ class FinishBattleViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        resultLabel.text = presenter.getBattleStatus() == .win ? "You Win" : "You Lose"
+        DispatchQueue.main.async {
+            self.resultLabel.text = self.presenter.getBattleStatus() == .win ? "You Win" : "You Lose"
+            self.exitButton.setTitle("Exit", for: .normal)
+        }
     }
     
     @IBAction func onExitButtonPressed(_ sender: Any) {

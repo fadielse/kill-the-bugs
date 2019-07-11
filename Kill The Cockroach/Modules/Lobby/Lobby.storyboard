@@ -23,23 +23,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="XWZ-y3-q2T">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host a Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-V3-hCk">
-                                <rect key="frame" x="101" y="84" width="172" height="32.5"/>
+                                <rect key="frame" x="101" y="84" width="172" height="33.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" red="0.36862745099999999" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KJt-qM-Dzl">
-                                <rect key="frame" x="46.5" y="149" width="281.5" height="30"/>
+                                <rect key="frame" x="34" y="150" width="306" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbp-Of-ffm">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
+                                        <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="18"/>
+                                        <color key="textColor" red="0.36862745099999999" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="2" height="-1"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BFw-qh-Pd0">
-                                        <rect key="frame" x="101.5" y="0.0" width="180" height="30"/>
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BFw-qh-Pd0">
+                                        <rect key="frame" x="126" y="0.0" width="180" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="3i4-Kx-AF2"/>
                                         </constraints>
@@ -49,25 +56,35 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IsJ-QT-7qK">
-                                <rect key="frame" x="16" y="228" width="343" height="265"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IsJ-QT-7qK">
+                                <rect key="frame" x="16" y="229" width="343" height="264"/>
+                                <color key="backgroundColor" white="1" alpha="0.70059419014084512" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWV-9P-Gux">
-                                <rect key="frame" x="16" y="20" width="64" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="25"/>
-                                <state key="normal" title="Back">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWV-9P-Gux">
+                                <rect key="frame" x="16" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Qcf-0e-uAZ"/>
+                                    <constraint firstAttribute="width" constant="50" id="s9h-Y8-yPc"/>
+                                </constraints>
+                                <state key="normal" image="close-button-normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="onBackButtonTapped:" destination="1dX-N7-XUl" eventType="touchUpInside" id="aGY-gN-NCy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-u6-BN3">
-                                <rect key="frame" x="150.5" y="516" width="74" height="45"/>
-                                <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="25"/>
-                                <state key="normal" title="Start">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-u6-BN3">
+                                <rect key="frame" x="97.5" y="516" width="180" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="vYf-2a-1y4"/>
+                                    <constraint firstAttribute="height" constant="80" id="wFP-Yx-CBb"/>
+                                </constraints>
+                                <state key="normal" title="Start" image="start-button-disable">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -78,20 +95,30 @@
                         <color key="backgroundColor" red="0.25490196078431371" green="0.97254901960784312" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DEK-3G-Vg1" firstAttribute="bottom" secondItem="IsJ-QT-7qK" secondAttribute="bottom" constant="174" id="0Gk-Ba-c2o"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="bottom" secondItem="XWZ-y3-q2T" secondAttribute="bottom" id="1pA-O6-FhT"/>
                             <constraint firstItem="5l5-V3-hCk" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" constant="101" id="2bg-VJ-Osm"/>
                             <constraint firstItem="IsJ-QT-7qK" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" constant="16" id="85M-Es-YfF"/>
                             <constraint firstItem="HtX-u6-BN3" firstAttribute="centerX" secondItem="IsJ-QT-7qK" secondAttribute="centerX" id="ILg-Pj-lyf"/>
                             <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="IsJ-QT-7qK" secondAttribute="trailing" constant="16" id="Q4U-Y7-Qym"/>
                             <constraint firstItem="HtX-u6-BN3" firstAttribute="top" secondItem="IsJ-QT-7qK" secondAttribute="bottom" constant="23" id="Q7L-OM-pNE"/>
+                            <constraint firstItem="XWZ-y3-q2T" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" id="SEL-nq-3YB"/>
                             <constraint firstItem="5l5-V3-hCk" firstAttribute="top" secondItem="DEK-3G-Vg1" secondAttribute="top" constant="64" id="TUS-n2-EOF"/>
                             <constraint firstItem="KJt-qM-Dzl" firstAttribute="centerX" secondItem="5l5-V3-hCk" secondAttribute="centerX" id="Vb1-nu-mzP"/>
                             <constraint firstItem="KJt-qM-Dzl" firstAttribute="top" secondItem="5l5-V3-hCk" secondAttribute="bottom" constant="32.5" id="f6p-4U-Yfn"/>
+                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="XWZ-y3-q2T" secondAttribute="trailing" id="jnI-HN-qHf"/>
+                            <constraint firstItem="WWV-9P-Gux" firstAttribute="top" secondItem="DEK-3G-Vg1" secondAttribute="top" id="meZ-S6-da5"/>
+                            <constraint firstItem="XWZ-y3-q2T" firstAttribute="top" secondItem="1aI-fb-72i" secondAttribute="top" id="oW1-NS-EPk"/>
                             <constraint firstItem="DEK-3G-Vg1" firstAttribute="trailing" secondItem="5l5-V3-hCk" secondAttribute="trailing" constant="102" id="s3w-Wk-e0k"/>
                             <constraint firstItem="IsJ-QT-7qK" firstAttribute="top" secondItem="KJt-qM-Dzl" secondAttribute="bottom" constant="49" id="sPW-Ax-l0a"/>
+                            <constraint firstItem="WWV-9P-Gux" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" constant="16" id="zKm-Z9-mJP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="closeButton" destination="WWV-9P-Gux" id="iUN-Gc-O2J"/>
+                        <outlet property="nameLabel" destination="BFw-qh-Pd0" id="Zvr-Hz-Gme"/>
                         <outlet property="startHostButton" destination="HtX-u6-BN3" id="0xG-6f-99K"/>
                         <outlet property="tableView" destination="IsJ-QT-7qK" id="jq7-ed-orx"/>
                         <outlet property="titleLabel" destination="5l5-V3-hCk" id="zdo-Bi-4UX"/>
@@ -111,4 +138,9 @@
             <point key="canvasLocation" x="-80" y="-321"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="341" height="455"/>
+        <image name="close-button-normal" width="171" height="173"/>
+        <image name="start-button-disable" width="315" height="140"/>
+    </resources>
 </document>

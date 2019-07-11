@@ -41,6 +41,23 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupView()
+    }
+    
+    func setupView() {
+        setupHostButton()
+        setupJoinButton()
+    }
+    
+    func setupHostButton() {
+        hostButton.setImage(#imageLiteral(resourceName: "host-button-normal"), for: .normal)
+        hostButton.setImage(#imageLiteral(resourceName: "host-button-click"), for: .highlighted)
+    }
+    
+    func setupJoinButton() {
+        joinButton.setImage(#imageLiteral(resourceName: "join-button-normal"), for: .normal)
+        joinButton.setImage(#imageLiteral(resourceName: "join-button-click"), for: .highlighted)
     }
     
     @IBAction func onHostButtonTapped(_ sender: Any) {

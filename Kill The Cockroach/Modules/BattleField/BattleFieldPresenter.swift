@@ -64,6 +64,10 @@ class BattleFieldPresenter: BattleFieldViewPresenter {
     }
     
     func sendSwitchPlayer() {
+        if getIsMyTurn() {
+            return
+        }
+        
         gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .switchPlayerToMove,
                                                                targetPosition: nil,
                                                                targetIndex: nil,

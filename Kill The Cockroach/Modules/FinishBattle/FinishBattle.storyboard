@@ -64,6 +64,7 @@
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
                     <connections>
+                        <outlet property="exitButton" destination="dTg-OE-sTc" id="9P9-7Z-Ner"/>
                         <outlet property="resultLabel" destination="7ot-uS-EV8" id="wTZ-Wf-cTn"/>
                     </connections>
                 </viewController>
