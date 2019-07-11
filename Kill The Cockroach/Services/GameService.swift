@@ -84,8 +84,8 @@ extension GameService {
 
 // MARK: Battle Ground Service
 extension GameService {
-    func sendReadyToPlay(withPackage package: GamePlay) {
-        NSLog("%@", "sendGame to \(session.connectedPeers.count) peers")
+    func sendGamePlayPackage(withPackage package: GamePlay) {
+        NSLog("%@", "packages to \(session.connectedPeers.count) peers")
         
         if session.connectedPeers.count > 0 {
             let encoder = JSONEncoder()
@@ -104,7 +104,6 @@ extension GameService {
                 print(error.localizedDescription)
             }
         }
-        
     }
 }
 

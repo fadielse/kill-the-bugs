@@ -27,6 +27,13 @@ class BattleFieldViewController: BaseViewController {
     
     // MARK: Lifecycle
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueConstants.BattleField.showFinishPopup {
+            let vc = segue.destination as! FinishBattleViewController
+            vc.presenter.setBattleStatus(presenter.getReceiveDeclarationVictory() ? .lose : .win)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         BattleFieldPresenter.config(withBattleFieldViewController: self)
@@ -35,13 +42,13 @@ class BattleFieldViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        presenter.gameService?.battleDelegate = self
-//        presenter.sendReadyToPlay()
+        presenter.gameService?.battleDelegate = self
         
-        presenter.setIsPlayerHost(true)
         if presenter.getIsPlayerHost() {
             prepareBattle()
         }
+        
+        presenter.sendReadyToPlay()
         
         setupCollectionView()
     }
@@ -83,10 +90,10 @@ extension BattleFieldViewController {
         missileImage.layer.add(animation, forKey: "animate rocket move to target")
         missileImage.center = target
         
-        UIView.animate(withDuration: 2.0, animations: {
+        UIView.animate(withDuration: 2.1, animations: {
             self.missileImage.transform = CGAffineTransform.identity.scaledBy(x: 0.7, y: 0.7)
         }) { (success) in
-            self.missileImage.transform = .identity
+            self.missileImage.transform =  .identity
             self.animateExplodeCell()
         }
     }
@@ -103,10 +110,11 @@ extension BattleFieldViewController {
                 let deadlineTime = DispatchTime.now() + .seconds(3)
                 DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
                     self.matchEnded()
+                    self.presenter.sendDeclarationOfVictory()
                 }
+            } else {
+                presenter.sendSwitchPlayer()
             }
-            
-            presenter.setIsMyTurn(true)
         }
     }
     
@@ -123,7 +131,36 @@ extension BattleFieldViewController: GameServiceBattleDelegate {
             let jsonDecoder = JSONDecoder()
             let package = try jsonDecoder.decode(GamePlay.self, from: package)
             
-            updateViewToStartBattle()
+            switch package.type {
+            case .readyToPlay:
+                print("Receive readyToPlay package")
+                
+                if let targetPosition = package.targetPosition, !presenter.getIsPlayerHost() {
+                    presenter.setCocroachIndex(targetPosition)
+                }
+                
+                updateViewToStartBattle()
+            case .playerMove:
+                print("Receive playerMove package")
+                presenter.setSelectedTargetIndex(package.targetIndex!)
+                
+                if let selectedIndex = self.presenter.getSelectedTargetIndex(), let cell = self.presenter.getObstacleCell(withIndex: selectedIndex) {
+                    let deadlineTime = DispatchTime.now() + .milliseconds(500)
+                    DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                        self.presenter.destroyedObstacles.append(selectedIndex)
+                        self.launchMissile(toTarget: CGPoint(x: cell.globalFrame?.midX ?? 0, y: cell.globalFrame?.maxY ?? 0))
+                    }
+                } else {
+                    print("Missing Target package")
+                }
+            case .switchPlayerToMove:
+                print("Receive switchPlayerToMove package")
+                presenter.setIsMyTurn(true)
+            case .declarationOfVictory:
+                print("Receive declarationOfVictory package")
+                presenter.setReceiveDeclarationVictory(true)
+                self.matchEnded()
+            }
         }
         catch {
             print("Error on Decoding package")
@@ -155,12 +192,16 @@ extension BattleFieldViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if !presenter.getIsMyTurn() {
+        if !presenter.getIsMyTurn() || presenter.destroyedObstacles.contains(indexPath.row) {
             return
         }
         
-        presenter.setIsMyTurn(false)
         presenter.setSelectedTargetIndex(indexPath.row)
+        prepareToAttack()
+    }
+    
+    func prepareToAttack() {
+        presenter.setIsMyTurn(false)
         
         let deadlineTime = DispatchTime.now() + .milliseconds(500)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
@@ -170,6 +211,7 @@ extension BattleFieldViewController: UICollectionViewDelegate, UICollectionViewD
                 
                 popTip.tapHandler = { popTip in
                     print("Attaaackkkk!!!")
+                    self.presenter.sendPlayMove(withTargetIndex: selectedIndex)
                     cell.aimImage.isHidden = true
                     self.presenter.destroyedObstacles.append(selectedIndex)
                     

@@ -37,6 +37,7 @@ class LobbyViewController: BaseViewController {
         if segue.identifier == SegueConstants.Lobby.jumpToBattleField {
             let vc = segue.destination as! BattleFieldViewController
             vc.presenter.gameService = presenter.gameService
+            vc.presenter.setIsPlayerHost(presenter.playerType == .host)
         }
     }
     
@@ -102,6 +103,9 @@ extension LobbyViewController: GameServiceDelegate {
     
     func GameService(deviceConnectedWithManager manager: GameService, connectedDevices: String) {
         print("Connected to Opponent Player")
+        self.presenter.gameService.stopHost()
+        self.presenter.gameService.stopBrowse()
+        
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: SegueConstants.Lobby.jumpToBattleField, sender: nil)
         }

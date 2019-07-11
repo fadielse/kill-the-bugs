@@ -43,6 +43,7 @@
 		1B58ABBC22D3498700C77FFD /* tree-sprites_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB722D3498700C77FFD /* tree-sprites_5.png */; };
 		1B58ABBD22D3498700C77FFD /* tree-sprites_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB822D3498700C77FFD /* tree-sprites_4.png */; };
 		1B58ABBE22D3498700C77FFD /* tree-sprites_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB922D3498700C77FFD /* tree-sprites_3.png */; };
+		1BBC8C3A22D71E9000FE374F /* EnumBattleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC8C3922D71E9000FE374F /* EnumBattleStatus.swift */; };
 		1BE51A2622CF621A00FB552B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE51A2522CF621A00FB552B /* AppDelegate.swift */; };
 		1BE51A2D22CF621B00FB552B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2C22CF621B00FB552B /* Assets.xcassets */; };
 		1BE51A3022CF621B00FB552B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2E22CF621B00FB552B /* LaunchScreen.storyboard */; };
@@ -103,6 +104,7 @@
 		1B58ABB722D3498700C77FFD /* tree-sprites_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_5.png"; sourceTree = "<group>"; };
 		1B58ABB822D3498700C77FFD /* tree-sprites_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_4.png"; sourceTree = "<group>"; };
 		1B58ABB922D3498700C77FFD /* tree-sprites_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_3.png"; sourceTree = "<group>"; };
+		1BBC8C3922D71E9000FE374F /* EnumBattleStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumBattleStatus.swift; sourceTree = "<group>"; };
 		1BE51A2222CF621A00FB552B /* Kill The Cockroach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kill The Cockroach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE51A2522CF621A00FB552B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE51A2C22CF621B00FB552B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			children = (
 				FF41A62022CFACAC00AC75BB /* EnumPlayerType.swift */,
 				FF41A62E22D0956C00AC75BB /* EnumPackageType.swift */,
+				1BBC8C3922D71E9000FE374F /* EnumBattleStatus.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				1B15043522D482E4000D1141 /* FinishBattlePresenter.swift in Sources */,
 				FF41A60922CFA84600AC75BB /* HomeViewController.swift in Sources */,
 				FF41A62422CFADFC00AC75BB /* SegueConstants.swift in Sources */,
+				1BBC8C3A22D71E9000FE374F /* EnumBattleStatus.swift in Sources */,
 				FF41A63122D0961000AC75BB /* GamePlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,7 +609,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -660,7 +664,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

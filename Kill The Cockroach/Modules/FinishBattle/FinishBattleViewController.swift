@@ -31,6 +31,8 @@ class FinishBattleViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resultLabel.text = presenter.getBattleStatus() == .win ? "You Win" : "You Lose"
     }
     
     @IBAction func onExitButtonPressed(_ sender: Any) {

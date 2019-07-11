@@ -12,6 +12,7 @@ protocol BattleFieldViewPresenter: class {
     init(view: BattleFieldView)
     
     func sendReadyToPlay()
+    func sendPlayMove(withTargetIndex targetIndex: Int)
     func setSelectedTargetIndex(_ index: Int)
     func getSelectedTargetIndex() -> Int?
     func getObstacleCell(withIndex index: Int) -> ObstacleCollectionViewCell?
@@ -21,6 +22,8 @@ protocol BattleFieldViewPresenter: class {
     func getCocroachIndex() -> Int
     func setIsMyTurn(_ isMyTurn: Bool)
     func getIsMyTurn() -> Bool
+    func setReceiveDeclarationVictory(_ victory: Bool)
+    func getReceiveDeclarationVictory() -> Bool
 }
 
 protocol BattleFieldView: class {
@@ -39,17 +42,49 @@ class BattleFieldPresenter: BattleFieldViewPresenter {
     var selectedTargetIndex: Int?
     var destroyedObstacles = [Int]()
     var obstacleCells = [ObstacleCollectionViewCell]()
-    var isPlayerHost: Bool = false
+    var isPlayerHost: Bool = false {
+        didSet {
+            isMyTurn = isPlayerHost
+        }
+    }
     var cocroachIndex: Int = 0
-    var isMyTurn: Bool = true
+    var isMyTurn: Bool = false
+    var receiveDeclarationVictory: Bool = false
     
     required init(view: BattleFieldView) {
         self.view = view
     }
     
+    // Game play method
     func sendReadyToPlay() {
-        gameService?.sendReadyToPlay(withPackage: GamePlay(type: .readyToPlay))
+        gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .readyToPlay,
+                                                               targetPosition: cocroachIndex,
+                                                               targetIndex: nil,
+                                                               isYourMove: nil))
     }
+    
+    func sendSwitchPlayer() {
+        gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .switchPlayerToMove,
+                                                               targetPosition: nil,
+                                                               targetIndex: nil,
+                                                               isYourMove: true))
+    }
+    
+    func sendPlayMove(withTargetIndex targetIndex: Int) {
+        gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .playerMove,
+                                                               targetPosition: nil,
+                                                               targetIndex: targetIndex,
+                                                               isYourMove: nil))
+    }
+    
+    func sendDeclarationOfVictory() {
+        gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .declarationOfVictory,
+                                                               targetPosition: nil,
+                                                               targetIndex: nil,
+                                                               isYourMove: nil))
+    }
+    
+    // End Game play method
     
     func setSelectedTargetIndex(_ index: Int) {
         selectedTargetIndex = index
@@ -93,5 +128,13 @@ class BattleFieldPresenter: BattleFieldViewPresenter {
     
     func getIsMyTurn() -> Bool {
         return isMyTurn
+    }
+    
+    func setReceiveDeclarationVictory(_ victory: Bool) {
+        self.receiveDeclarationVictory = victory
+    }
+    
+    func getReceiveDeclarationVictory() -> Bool {
+        return receiveDeclarationVictory
     }
 }

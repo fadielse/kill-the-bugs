@@ -10,7 +10,9 @@ import Foundation
 
 protocol FinishBattleViewPresenter: class {
     init(view: FinishBattleView)
-    // TODO: Declare view presenter methods
+    
+    func setBattleStatus(_ status: EnumBattleStatus)
+    func getBattleStatus() -> EnumBattleStatus
 }
 
 protocol FinishBattleView: class {
@@ -25,10 +27,17 @@ class FinishBattlePresenter: FinishBattleViewPresenter {
     }
     
     let view: FinishBattleView
+    var battleStatus: EnumBattleStatus = .win
     
     required init(view: FinishBattleView) {
         self.view = view
     }
     
-    // TODO: Implement view presenter methods
+    func setBattleStatus(_ status: EnumBattleStatus) {
+        self.battleStatus = status
+    }
+    
+    func getBattleStatus() -> EnumBattleStatus {
+        return self.battleStatus
+    }
 }

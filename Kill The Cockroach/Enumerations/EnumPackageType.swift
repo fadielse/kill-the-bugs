@@ -11,4 +11,6 @@ import Foundation
 enum EnumPackageType: String, Codable {
     case readyToPlay = "Ready to Play"
     case switchPlayerToMove = "Change Player Move"
+    case playerMove = "Player Move"
+    case declarationOfVictory = "Declaration of Victory"
 }
