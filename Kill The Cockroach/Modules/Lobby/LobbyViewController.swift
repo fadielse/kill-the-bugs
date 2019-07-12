@@ -45,10 +45,16 @@ class LobbyViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter.gameService.delegate = self
-        
         setupView()
+        
+        if let savedPlayer = presenter.getSavedPlayerName(), !savedPlayer.isEmpty, presenter.getPlayerType() == .client {
+            presenter.startBrowsePlayer(withPlayerName: savedPlayer)
+            
+            let deadlineTime = DispatchTime.now() + .milliseconds(500)
+            DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                self.presenter.gameService.delegate = self
+            }
+        }
     }
     
     @IBAction func onBackButtonTapped(_ sender: Any) {
@@ -59,7 +65,12 @@ class LobbyViewController: BaseViewController {
     
     @IBAction func onStartHostButtonTapped(_ sender: Any) {
         if let name = nameLabel.text, !name.isEmpty {
-            presenter.startHost()
+            presenter.startHost(withPlayerName: name)
+            
+            let deadlineTime = DispatchTime.now() + .milliseconds(500)
+            DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                self.presenter.gameService.delegate = self
+            }
         } else {
             nameLabel.becomeFirstResponder()
         }
@@ -86,6 +97,7 @@ class LobbyViewController: BaseViewController {
     
     func setupNameLabel() {
         nameLabel.delegate = self
+        nameLabel.text = presenter.getSavedPlayerName()
     }
     
     func setupTableView() {
@@ -101,17 +113,26 @@ class LobbyViewController: BaseViewController {
     func updateViewAsHost() {
         titleLabel.text = "Host a Game"
         startHostButton.isHidden = false
+        
+        if presenter.isPlayerExists() {
+            startHostButton.setImage(#imageLiteral(resourceName: "start-button-normal"), for: .normal)
+        }
     }
     
     func updateViewAsClient() {
         titleLabel.text = "Join a Game"
         startHostButton.isHidden = true
-        presenter.startBrowsePlayer()
+        
+        if !presenter.isPlayerExists() {
+            nameLabel.becomeFirstResponder()
+        }
     }
     
     func stopGameService() {
-        presenter.gameService.stopHost()
-        presenter.gameService.stopBrowse()
+        if let _ = presenter.gameService {
+            presenter.gameService.stopHost()
+            presenter.gameService.stopBrowse()
+        }
     }
 }
 
@@ -121,10 +142,23 @@ extension LobbyViewController: LobbyView {
 
 extension LobbyViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let name = nameLabel.text, !name.isEmpty {
-            startHostButton.setImage(#imageLiteral(resourceName: "start-button-normal"), for: .normal)
-        } else {
-            setupStartButton()
+        switch presenter.getPlayerType() {
+        case .host:
+            if let name = nameLabel.text, !name.isEmpty {
+                startHostButton.setImage(#imageLiteral(resourceName: "start-button-normal"), for: .normal)
+            } else {
+                setupStartButton()
+            }
+        case .client:
+            if let name = nameLabel.text, !name.isEmpty {
+                presenter.startBrowsePlayer(withPlayerName: name)
+                let deadlineTime = DispatchTime.now() + .milliseconds(500)
+                DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                    self.presenter.gameService.delegate = self
+                }
+            } else {
+                nameLabel.becomeFirstResponder()
+            }
         }
     }
 }
@@ -163,6 +197,7 @@ extension LobbyViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "playerCell")
         
         if let player = presenter.getAvaiblePlayer(withIndex: indexPath.row) {
+            print("Avaible: \(player.name)")
             cell.textLabel?.text = player.name
         }
         
@@ -175,6 +210,10 @@ extension LobbyViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
         
-        presenter.invitePlayerToMatchMaking(withOpponentPlayer: player)
+        if let name = nameLabel.text, !name.isEmpty {
+            presenter.invitePlayerToMatchMaking(withOpponentPlayer: player)
+        } else {
+            nameLabel.becomeFirstResponder()
+        }
     }
 }

@@ -24,8 +24,6 @@ protocol GameServiceBattleDelegate {
 
 class GameService: NSObject {
     
-    open var player: Player?
-    
     private let gameServiceType = "fadielse-game"
     
     private var myPeerId = MCPeerID(displayName: UIDevice.current.name)
@@ -44,7 +42,8 @@ class GameService: NSObject {
     }()
     
     override init() {
-        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: player?.getInfoForService(), serviceType: gameServiceType)
+        let player = Player(name: UserDefaults.standard.string(forKey: UserDefaultConstant.playerInfo) ?? "Anynomous", peerId: nil)
+        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: player.getInfoForService(), serviceType: gameServiceType)
         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: gameServiceType)
         
         super.init()
