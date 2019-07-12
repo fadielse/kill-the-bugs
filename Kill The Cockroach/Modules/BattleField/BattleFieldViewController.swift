@@ -54,7 +54,7 @@ class BattleFieldViewController: BaseViewController {
     }
     
     func prepareBattle() {
-        let cocroachIndex = Int.random(in: 0..<40)
+        let cocroachIndex = Int.random(in: 0..<30)
         presenter.setCocroachIndex(cocroachIndex)
         
         print("Cocroach in: \(cocroachIndex)")
@@ -142,6 +142,7 @@ extension BattleFieldViewController: GameServiceBattleDelegate {
                 
                 if let targetPosition = package.targetPosition, !presenter.getIsPlayerHost() {
                     presenter.setCocroachIndex(targetPosition)
+                    print("Receive readyToPlay bugs position: \(targetPosition)")
                 }
                 
                 updateViewToStartBattle()

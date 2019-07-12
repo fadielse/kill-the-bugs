@@ -26,45 +26,70 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDA-cq-HXO">
                                 <rect key="frame" x="47.5" y="163.5" width="280" height="160"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU WIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-uS-EV8">
-                                        <rect key="frame" x="75" y="16" width="130" height="35"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-pattern" translatesAutoresizingMaskIntoConstraints="NO" id="MZ4-JC-CsE">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="160"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immune-cocroach" translatesAutoresizingMaskIntoConstraints="NO" id="qbE-xT-sqY">
+                                        <rect key="frame" x="0.0" y="-50" width="100" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="6iF-JO-RzJ"/>
+                                            <constraint firstAttribute="width" secondItem="qbE-xT-sqY" secondAttribute="height" multiplier="1:2" id="R0t-Ct-2Rq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU WIN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-uS-EV8">
+                                        <rect key="frame" x="130" y="35" width="130" height="35"/>
                                         <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="27"/>
-                                        <color key="textColor" red="0.5" green="0.46713776843098581" blue="0.052720350943661974" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-OE-sTc">
-                                        <rect key="frame" x="110" y="103" width="60" height="41"/>
-                                        <color key="backgroundColor" red="0.97254901959999995" green="0.82745098039999998" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="h1h-jW-PrK"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Videophreak" family="Videophreak" pointSize="22"/>
-                                        <state key="normal" title="Exit"/>
-                                        <connections>
-                                            <action selector="onExitButtonPressed:" destination="1dX-N7-XUl" eventType="touchUpInside" id="4Sn-oC-GlE"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="5G3-Ql-JaY"/>
-                                    <constraint firstItem="dTg-OE-sTc" firstAttribute="centerX" secondItem="VDA-cq-HXO" secondAttribute="centerX" id="Uo6-AM-cDF"/>
+                                    <constraint firstAttribute="trailing" secondItem="7ot-uS-EV8" secondAttribute="trailing" constant="20" id="737-I9-bmB"/>
+                                    <constraint firstItem="MZ4-JC-CsE" firstAttribute="centerY" secondItem="VDA-cq-HXO" secondAttribute="centerY" id="JgX-CV-wJq"/>
+                                    <constraint firstAttribute="trailing" secondItem="MZ4-JC-CsE" secondAttribute="trailing" id="Klf-jd-MOD"/>
+                                    <constraint firstItem="MZ4-JC-CsE" firstAttribute="centerX" secondItem="VDA-cq-HXO" secondAttribute="centerX" id="Wm4-fk-DoD"/>
+                                    <constraint firstItem="MZ4-JC-CsE" firstAttribute="leading" secondItem="VDA-cq-HXO" secondAttribute="leading" id="Zxr-Ki-ykk"/>
+                                    <constraint firstItem="qbE-xT-sqY" firstAttribute="top" secondItem="VDA-cq-HXO" secondAttribute="top" constant="-50" id="eIU-gp-xUF"/>
                                     <constraint firstAttribute="width" constant="280" id="gT6-ND-mMb"/>
-                                    <constraint firstItem="7ot-uS-EV8" firstAttribute="top" secondItem="VDA-cq-HXO" secondAttribute="top" constant="16" id="kGB-PH-0I1"/>
-                                    <constraint firstItem="7ot-uS-EV8" firstAttribute="centerX" secondItem="VDA-cq-HXO" secondAttribute="centerX" id="ooF-yg-Mty"/>
-                                    <constraint firstAttribute="bottom" secondItem="dTg-OE-sTc" secondAttribute="bottom" constant="16" id="vKY-nT-AKG"/>
+                                    <constraint firstItem="qbE-xT-sqY" firstAttribute="leading" secondItem="VDA-cq-HXO" secondAttribute="leading" id="hop-XF-kwF"/>
+                                    <constraint firstItem="7ot-uS-EV8" firstAttribute="leading" secondItem="qbE-xT-sqY" secondAttribute="trailing" constant="30" id="i0W-TJ-DE5"/>
+                                    <constraint firstItem="7ot-uS-EV8" firstAttribute="top" secondItem="VDA-cq-HXO" secondAttribute="top" constant="35" id="kGB-PH-0I1"/>
+                                    <constraint firstAttribute="bottom" secondItem="MZ4-JC-CsE" secondAttribute="bottom" id="kZY-FE-kaW"/>
+                                    <constraint firstItem="MZ4-JC-CsE" firstAttribute="top" secondItem="VDA-cq-HXO" secondAttribute="top" id="sh9-Wq-HtY"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-OE-sTc">
+                                <rect key="frame" x="307.5" y="143.5" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Ge-9W-8yP"/>
+                                    <constraint firstAttribute="width" constant="40" id="h1h-jW-PrK"/>
+                                </constraints>
+                                <state key="normal" title="Exit" image="close-button-normal"/>
+                                <connections>
+                                    <action selector="onExitButtonPressed:" destination="1dX-N7-XUl" eventType="touchUpInside" id="4Sn-oC-GlE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="0.20152948943661972" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VDA-cq-HXO" firstAttribute="centerX" secondItem="DEK-3G-Vg1" secondAttribute="centerX" id="HxW-Aq-Cso"/>
+                            <constraint firstItem="dTg-OE-sTc" firstAttribute="top" secondItem="VDA-cq-HXO" secondAttribute="top" constant="-20" id="OH8-a5-Ehd"/>
                             <constraint firstItem="VDA-cq-HXO" firstAttribute="centerY" secondItem="DEK-3G-Vg1" secondAttribute="centerY" constant="-100" id="XHS-1v-H82"/>
+                            <constraint firstItem="dTg-OE-sTc" firstAttribute="trailing" secondItem="VDA-cq-HXO" secondAttribute="trailing" constant="20" id="bXE-fB-cJE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="dTg-OE-sTc" id="9P9-7Z-Ner"/>
+                        <outlet property="resultImage" destination="qbE-xT-sqY" id="3RK-0y-5So"/>
                         <outlet property="resultLabel" destination="7ot-uS-EV8" id="wTZ-Wf-cTn"/>
                     </connections>
                 </viewController>
@@ -73,4 +98,9 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close-button-normal" width="171" height="173"/>
+        <image name="gradient-pattern" width="1900" height="1267"/>
+        <image name="immune-cocroach" width="525" height="700"/>
+    </resources>
 </document>

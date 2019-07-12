@@ -20,6 +20,7 @@ class FinishBattleViewController: BaseViewController {
     // MARK: Properties
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet weak var resultImage: UIImageView!
     
     var presenter: FinishBattlePresenter!
     
@@ -39,6 +40,8 @@ class FinishBattleViewController: BaseViewController {
         
         DispatchQueue.main.async {
             self.resultLabel.text = self.presenter.getBattleStatus() == .win ? "You Win" : "You Lose"
+            self.resultImage.image = self.presenter.getBattleStatus() == .win ?
+                #imageLiteral(resourceName: "immune-cocroach") : #imageLiteral(resourceName: "lose-cockroach")
             self.exitButton.setTitle("Exit", for: .normal)
         }
     }

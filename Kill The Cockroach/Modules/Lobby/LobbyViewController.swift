@@ -65,6 +65,9 @@ class LobbyViewController: BaseViewController {
     
     @IBAction func onStartHostButtonTapped(_ sender: Any) {
         if let name = nameLabel.text, !name.isEmpty {
+            startHostButton.isUserInteractionEnabled = false
+            startHostButton.setImage(#imageLiteral(resourceName: "start-button-disable"), for: .normal)
+            
             presenter.startHost(withPlayerName: name)
             
             let deadlineTime = DispatchTime.now() + .milliseconds(500)
