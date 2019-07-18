@@ -22,6 +22,8 @@ class BattleFieldViewController: BaseViewController {
     @IBOutlet weak var opponentNameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var missileImage: UIImageView!
+    @IBOutlet weak var playerImage: UIImageView!
+    @IBOutlet weak var opponentImage: UIImageView!
     
     var presenter: BattleFieldPresenter!
     
@@ -47,10 +49,16 @@ class BattleFieldViewController: BaseViewController {
         if presenter.getIsPlayerHost() {
             prepareBattle()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        presenter.sendReadyToPlay()
-        
-        setupCollectionView()
+        let deadlineTime = DispatchTime.now() + .seconds(2)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            self.presenter.sendReadyToPlay()
+            self.setupView()
+        }
     }
     
     func prepareBattle() {
@@ -60,6 +68,11 @@ class BattleFieldViewController: BaseViewController {
         print("Cocroach in: \(cocroachIndex)")
     }
     
+    func setupView() {
+        setupCollectionView()
+        setupBottomView()
+    }
+    
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -67,12 +80,42 @@ class BattleFieldViewController: BaseViewController {
         collectionView.register(UINib(nibName: "ObstacleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ObstacleCollectionViewCell")
     }
     
+    func setupBottomView() {
+        playerNameLabel.text = UserDefaults.standard.object(forKey: UserDefaultConstant.playerInfo) as? String
+        opponentNameLabel.text = presenter.opponentPlayerName
+    }
+    
     func updateViewToStartBattle() {
+        animateTurnImage()
+    }
+    
+    func animateTurnImage() {
+        DispatchQueue.main.async {
+            let imagesToAnimate = [UIImage(named: "empty-button-normal")!, UIImage(named: "empty-button-disable")!]
+            
+            if self.presenter.getIsMyTurn() {
+                self.opponentImage.stopAnimating()
+                
+                self.playerImage.animationImages = imagesToAnimate
+                self.playerImage.animationDuration = 0.5
+                self.playerImage.startAnimating()
+            } else {
+                self.playerImage.stopAnimating()
+                
+                self.opponentImage.animationImages = imagesToAnimate
+                self.opponentImage.animationDuration = 0.5
+                self.opponentImage.startAnimating()
+            }
+        }
     }
 }
 
 extension BattleFieldViewController: BattleFieldView {
-    // TODO: implement view methods
+    func setupOpponentName() {
+        DispatchQueue.main.async {
+            self.setupBottomView()
+        }
+    }
 }
 
 // MARK: GamePlay Method
@@ -117,6 +160,7 @@ extension BattleFieldViewController {
             } else {
                 let deadlineTime = DispatchTime.now() + .milliseconds(1300)
                 DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                    self.animateTurnImage()
                     self.presenter.sendSwitchPlayer()
                 }
             }
@@ -141,10 +185,13 @@ extension BattleFieldViewController: GameServiceBattleDelegate {
                 print("Receive readyToPlay package")
                 
                 if let targetPosition = package.targetPosition, !presenter.getIsPlayerHost() {
-                    presenter.setCocroachIndex(targetPosition)
                     print("Receive readyToPlay bugs position: \(targetPosition)")
+                    
+                    presenter.setCocroachIndex(targetPosition)
                 }
                 
+                presenter.opponentPlayerName = package.playerName ?? presenter.opponentPlayerName
+                print("Receive readyToPlay opponent name: \(presenter.opponentPlayerName)")
                 updateViewToStartBattle()
             case .playerMove:
                 print("Receive playerMove package")
@@ -162,6 +209,7 @@ extension BattleFieldViewController: GameServiceBattleDelegate {
             case .switchPlayerToMove:
                 print("Receive switchPlayerToMove package")
                 presenter.setIsMyTurn(true)
+                animateTurnImage()
             case .declarationOfVictory:
                 print("Receive declarationOfVictory package")
                 presenter.setReceiveDeclarationVictory(true)

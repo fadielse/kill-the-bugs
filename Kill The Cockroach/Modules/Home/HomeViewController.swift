@@ -21,6 +21,8 @@ class HomeViewController: BaseViewController {
     
     @IBOutlet weak var hostButton: UIButton!
     @IBOutlet weak var joinButton: UIButton!
+    @IBOutlet weak var cocroachImage: UIImageView!
+    @IBOutlet weak var missileImage: UIImageView!
     
     var presenter: HomePresenter!
     
@@ -46,8 +48,16 @@ class HomeViewController: BaseViewController {
     }
     
     func setupView() {
+        setupMissileImage()
         setupHostButton()
         setupJoinButton()
+    }
+    
+    func setupMissileImage() {
+        let image = UIImage(named: "missile")
+        let rotatedImage = image?.rotate(radians: 180)
+        
+        missileImage.image = rotatedImage
     }
     
     func setupHostButton() {

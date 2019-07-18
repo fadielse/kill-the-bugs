@@ -27,7 +27,7 @@ protocol BattleFieldViewPresenter: class {
 }
 
 protocol BattleFieldView: class {
-    // TODO: Declare view methods
+    func setupOpponentName()
 }
 
 class BattleFieldPresenter: BattleFieldViewPresenter {
@@ -50,6 +50,11 @@ class BattleFieldPresenter: BattleFieldViewPresenter {
     var cocroachIndex: Int = 0
     var isMyTurn: Bool = false
     var receiveDeclarationVictory: Bool = false
+    var opponentPlayerName: String = "Anynomous" {
+        didSet {
+            view.setupOpponentName()
+        }
+    }
     
     required init(view: BattleFieldView) {
         self.view = view
@@ -57,7 +62,8 @@ class BattleFieldPresenter: BattleFieldViewPresenter {
     
     // Game play method
     func sendReadyToPlay() {
-        gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .readyToPlay,
+        gameService?.sendGamePlayPackage(withPackage: GamePlay(playerName: UserDefaults.standard.object(forKey: UserDefaultConstant.playerInfo) as? String,
+                                                               type: .readyToPlay,
                                                                targetPosition: cocroachIndex,
                                                                targetIndex: nil,
                                                                isYourMove: nil))
@@ -68,21 +74,24 @@ class BattleFieldPresenter: BattleFieldViewPresenter {
             return
         }
         
-        gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .switchPlayerToMove,
+        gameService?.sendGamePlayPackage(withPackage: GamePlay(playerName: opponentPlayerName,
+                                                               type: .switchPlayerToMove,
                                                                targetPosition: nil,
                                                                targetIndex: nil,
                                                                isYourMove: true))
     }
     
     func sendPlayMove(withTargetIndex targetIndex: Int) {
-        gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .playerMove,
+        gameService?.sendGamePlayPackage(withPackage: GamePlay(playerName: opponentPlayerName,
+                                                               type: .playerMove,
                                                                targetPosition: nil,
                                                                targetIndex: targetIndex,
                                                                isYourMove: nil))
     }
     
     func sendDeclarationOfVictory() {
-        gameService?.sendGamePlayPackage(withPackage: GamePlay(type: .declarationOfVictory,
+        gameService?.sendGamePlayPackage(withPackage: GamePlay(playerName: opponentPlayerName,
+                                                               type: .declarationOfVictory,
                                                                targetPosition: nil,
                                                                targetIndex: nil,
                                                                isYourMove: nil))

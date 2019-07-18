@@ -34,7 +34,6 @@ class LobbyPresenter: LobbyViewPresenter {
     
     let view: LobbyView
     var playerType: EnumPlayerType = .host
-    var player: Player?
     var gameService: GameService!
     var avaiblePlayer = [Player]()
     

@@ -44,6 +44,7 @@
 		1B58ABBD22D3498700C77FFD /* tree-sprites_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB822D3498700C77FFD /* tree-sprites_4.png */; };
 		1B58ABBE22D3498700C77FFD /* tree-sprites_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B58ABB922D3498700C77FFD /* tree-sprites_3.png */; };
 		1B905A8E22D8602D00BDB9FC /* UserDefaultConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B905A8D22D8602D00BDB9FC /* UserDefaultConstant.swift */; };
+		1B92DFAC22DF0461002A5C57 /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DFAB22DF0461002A5C57 /* UIImage+Rotate.swift */; };
 		1BBC8C3A22D71E9000FE374F /* EnumBattleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC8C3922D71E9000FE374F /* EnumBattleStatus.swift */; };
 		1BE51A2622CF621A00FB552B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE51A2522CF621A00FB552B /* AppDelegate.swift */; };
 		1BE51A2D22CF621B00FB552B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2C22CF621B00FB552B /* Assets.xcassets */; };
@@ -106,6 +107,7 @@
 		1B58ABB822D3498700C77FFD /* tree-sprites_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_4.png"; sourceTree = "<group>"; };
 		1B58ABB922D3498700C77FFD /* tree-sprites_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree-sprites_3.png"; sourceTree = "<group>"; };
 		1B905A8D22D8602D00BDB9FC /* UserDefaultConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultConstant.swift; sourceTree = "<group>"; };
+		1B92DFAB22DF0461002A5C57 /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
 		1BBC8C3922D71E9000FE374F /* EnumBattleStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumBattleStatus.swift; sourceTree = "<group>"; };
 		1BE51A2222CF621A00FB552B /* Kill The Cockroach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kill The Cockroach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE51A2522CF621A00FB552B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				1B58ABB322D3403200C77FFD /* UIView+GlobalFrame.swift */,
+				1B92DFAB22DF0461002A5C57 /* UIImage+Rotate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B92DFAC22DF0461002A5C57 /* UIImage+Rotate.swift in Sources */,
 				FF41A62A22CFB2E200AC75BB /* GameService.swift in Sources */,
 				1B58AB7122D3269700C77FFD /* ObstacleCollectionViewCell.swift in Sources */,
 				FF41A61822CFA8D800AC75BB /* BattleFieldViewController.swift in Sources */,

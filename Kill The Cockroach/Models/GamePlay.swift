@@ -9,6 +9,7 @@
 import Foundation
 
 struct GamePlay: Codable {
+    var playerName: String?
     var type: EnumPackageType
     var targetPosition: Int?
     var targetIndex: Int?

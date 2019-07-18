@@ -160,7 +160,7 @@
                             <constraint firstItem="yJf-pH-P3E" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" id="gS1-IN-9es"/>
                             <constraint firstItem="OFG-rq-ccy" firstAttribute="leading" secondItem="DEK-3G-Vg1" secondAttribute="leading" constant="20" id="hEO-cr-p2A"/>
                             <constraint firstItem="9rL-r6-A38" firstAttribute="bottom" secondItem="DEK-3G-Vg1" secondAttribute="bottom" id="j6u-kL-7Le"/>
-                            <constraint firstItem="DEK-3G-Vg1" firstAttribute="bottom" secondItem="yJf-pH-P3E" secondAttribute="bottom" id="sSq-yN-rTu"/>
+                            <constraint firstAttribute="bottom" secondItem="yJf-pH-P3E" secondAttribute="bottom" id="sSq-yN-rTu"/>
                             <constraint firstItem="yJf-pH-P3E" firstAttribute="top" secondItem="1aI-fb-72i" secondAttribute="top" id="ytd-Bc-zhh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DEK-3G-Vg1"/>
@@ -170,7 +170,9 @@
                     <connections>
                         <outlet property="collectionView" destination="OFG-rq-ccy" id="QUR-WE-nwf"/>
                         <outlet property="missileImage" destination="ga1-M8-uvR" id="yUP-ey-Sa7"/>
+                        <outlet property="opponentImage" destination="Kum-qk-QSk" id="dhQ-l5-lQs"/>
                         <outlet property="opponentNameLabel" destination="pRZ-aU-vsa" id="MKp-dp-D4z"/>
+                        <outlet property="playerImage" destination="LPA-Nx-9dK" id="s38-4q-E3j"/>
                         <outlet property="playerNameLabel" destination="eMX-pq-wvZ" id="zjQ-1D-Cfo"/>
                         <segue destination="JiI-sI-vO4" kind="presentation" identifier="ShowFinishPopup" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="of1-8D-JZe"/>
                     </connections>

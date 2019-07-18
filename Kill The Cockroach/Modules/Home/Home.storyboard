@@ -22,14 +22,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run-cocroach" translatesAutoresizingMaskIntoConstraints="NO" id="9xj-Iv-ZqG">
-                                <rect key="frame" x="112.5" y="140" width="150" height="150"/>
+                                <rect key="frame" x="97.5" y="212" width="180" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="U22-Zr-TLm"/>
-                                    <constraint firstAttribute="height" constant="150" id="k4A-vV-wCX"/>
+                                    <constraint firstAttribute="width" constant="180" id="U22-Zr-TLm"/>
+                                    <constraint firstAttribute="height" constant="180" id="k4A-vV-wCX"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-t3-mxz">
-                                <rect key="frame" x="97.5" y="365" width="180" height="80"/>
+                                <rect key="frame" x="97.5" y="432" width="180" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="3Gs-ie-aKE"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGC-LD-LjL">
-                                <rect key="frame" x="97.5" y="475" width="180" height="80"/>
+                                <rect key="frame" x="97.5" y="542" width="180" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="JOIN GAME" image="join-button-normal">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,20 +52,33 @@
                                     <action selector="onJoinButtonTapped:" destination="4AI-5x-hsM" eventType="touchUpInside" id="lol-bq-TUX"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="1X6-qI-rOu">
+                                <rect key="frame" x="179.5" y="109" width="16" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52.999999999999972" id="AwT-W6-bdK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missile" translatesAutoresizingMaskIntoConstraints="NO" id="L6Z-YY-hzu">
+                                <rect key="frame" x="391.5" y="112" width="16" height="16"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.25490196078431371" green="0.97254901960784312" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wGC-LD-LjL" firstAttribute="height" secondItem="ZKb-t3-mxz" secondAttribute="height" id="3O6-hO-EqY"/>
                             <constraint firstItem="eaA-Np-0q5" firstAttribute="top" secondItem="60l-vQ-dez" secondAttribute="top" id="JXy-vZ-flc"/>
+                            <constraint firstItem="L6Z-YY-hzu" firstAttribute="top" secondItem="9xj-Iv-ZqG" secondAttribute="top" constant="-100" id="LFe-d2-F5e"/>
+                            <constraint firstItem="9xj-Iv-ZqG" firstAttribute="top" secondItem="1X6-qI-rOu" secondAttribute="bottom" constant="50" id="NCG-Ch-XwP"/>
                             <constraint firstItem="ZKb-t3-mxz" firstAttribute="centerX" secondItem="9xj-Iv-ZqG" secondAttribute="centerX" id="NJJ-nA-5LN"/>
                             <constraint firstItem="4z6-Ay-Wgb" firstAttribute="trailing" secondItem="eaA-Np-0q5" secondAttribute="trailing" id="Ny1-Bq-3fT"/>
-                            <constraint firstItem="ZKb-t3-mxz" firstAttribute="top" secondItem="9xj-Iv-ZqG" secondAttribute="bottom" constant="75" id="R3J-dx-a12"/>
+                            <constraint firstItem="1X6-qI-rOu" firstAttribute="centerX" secondItem="4z6-Ay-Wgb" secondAttribute="centerX" id="QD6-gB-zJB"/>
+                            <constraint firstItem="ZKb-t3-mxz" firstAttribute="top" secondItem="9xj-Iv-ZqG" secondAttribute="bottom" constant="40" id="R3J-dx-a12"/>
                             <constraint firstItem="eaA-Np-0q5" firstAttribute="leading" secondItem="4z6-Ay-Wgb" secondAttribute="leading" id="Rga-iP-h2k"/>
-                            <constraint firstItem="9xj-Iv-ZqG" firstAttribute="top" secondItem="4z6-Ay-Wgb" secondAttribute="top" constant="120" id="SCh-Oj-IIx"/>
                             <constraint firstItem="9xj-Iv-ZqG" firstAttribute="centerX" secondItem="4z6-Ay-Wgb" secondAttribute="centerX" id="Twx-7g-Nhx"/>
                             <constraint firstItem="wGC-LD-LjL" firstAttribute="top" secondItem="ZKb-t3-mxz" secondAttribute="bottom" constant="30" id="UIJ-3h-CpW"/>
+                            <constraint firstItem="L6Z-YY-hzu" firstAttribute="trailing" secondItem="9xj-Iv-ZqG" secondAttribute="trailing" constant="130" id="fNJ-j8-8YE"/>
+                            <constraint firstItem="1X6-qI-rOu" firstAttribute="top" secondItem="4z6-Ay-Wgb" secondAttribute="top" constant="89" id="fV0-i1-Wy7"/>
                             <constraint firstItem="wGC-LD-LjL" firstAttribute="width" secondItem="ZKb-t3-mxz" secondAttribute="width" id="ibi-Qi-CBU"/>
-                            <constraint firstItem="4z6-Ay-Wgb" firstAttribute="bottom" secondItem="eaA-Np-0q5" secondAttribute="bottom" id="k3r-Tc-bBI"/>
+                            <constraint firstAttribute="bottom" secondItem="eaA-Np-0q5" secondAttribute="bottom" id="k3r-Tc-bBI"/>
                             <constraint firstItem="wGC-LD-LjL" firstAttribute="centerX" secondItem="ZKb-t3-mxz" secondAttribute="centerX" id="y1F-Z9-jJM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4z6-Ay-Wgb"/>
@@ -73,14 +86,16 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="cocroachImage" destination="9xj-Iv-ZqG" id="h1I-0A-PCH"/>
                         <outlet property="hostButton" destination="ZKb-t3-mxz" id="mL8-jh-2F2"/>
                         <outlet property="joinButton" destination="wGC-LD-LjL" id="eY8-HX-IGU"/>
+                        <outlet property="missileImage" destination="L6Z-YY-hzu" id="Jvn-7s-uCw"/>
                         <segue destination="bgz-f3-0ZX" kind="presentation" identifier="jumpToLobby" id="Bx4-nt-ZVJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPR-qS-kQI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+            <point key="canvasLocation" x="130.40000000000001" y="137.18140929535232"/>
         </scene>
         <!--Lobby-->
         <scene sceneID="BNF-0M-aV5">
@@ -95,6 +110,8 @@
         <image name="background" width="341" height="455"/>
         <image name="host-button-normal" width="315" height="140"/>
         <image name="join-button-normal" width="315" height="140"/>
+        <image name="logo" width="567" height="98"/>
+        <image name="missile" width="52" height="197"/>
         <image name="run-cocroach" width="86.5" height="86.5"/>
     </resources>
 </document>

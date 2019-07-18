@@ -209,7 +209,7 @@ extension LobbyViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let player = presenter.getAvaiblePlayer(withIndex: indexPath.row) else {
-            // TODO: Failed Invite
+            print("Avaible Player Not Found")
             return
         }
         
