@@ -18,12 +18,15 @@ extension SegueConstants {
 class BattleFieldViewController: BaseViewController {
     
     // MARK: Properties
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var opponentNameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var missileImage: UIImageView!
     @IBOutlet weak var playerImage: UIImageView!
+    @IBOutlet weak var playerTurnImage: UIImageView!
     @IBOutlet weak var opponentImage: UIImageView!
+    @IBOutlet weak var opponentTurnImage: UIImageView!
     
     var presenter: BattleFieldPresenter!
     
@@ -71,6 +74,7 @@ class BattleFieldViewController: BaseViewController {
     func setupView() {
         setupCollectionView()
         setupBottomView()
+        setupTurnImageAnimation()
     }
     
     func setupCollectionView() {
@@ -80,6 +84,16 @@ class BattleFieldViewController: BaseViewController {
         collectionView.register(UINib(nibName: "ObstacleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ObstacleCollectionViewCell")
     }
     
+    func setupTurnImageAnimation() {
+        let imagesToAnimate = [UIImage(named: "empty-button-normal")!, UIImage(named: "empty-button-disable")!]
+        
+        self.playerImage.animationImages = imagesToAnimate
+        self.playerImage.animationDuration = 1.0
+        
+        self.opponentImage.animationImages = imagesToAnimate
+        self.opponentImage.animationDuration = 1.0
+    }
+    
     func setupBottomView() {
         playerNameLabel.text = UserDefaults.standard.object(forKey: UserDefaultConstant.playerInfo) as? String
         opponentNameLabel.text = presenter.opponentPlayerName
@@ -87,24 +101,39 @@ class BattleFieldViewController: BaseViewController {
     
     func updateViewToStartBattle() {
         animateTurnImage()
+        animateBlurBackground()
     }
     
     func animateTurnImage() {
         DispatchQueue.main.async {
-            let imagesToAnimate = [UIImage(named: "empty-button-normal")!, UIImage(named: "empty-button-disable")!]
-            
             if self.presenter.getIsMyTurn() {
                 self.opponentImage.stopAnimating()
-                
-                self.playerImage.animationImages = imagesToAnimate
-                self.playerImage.animationDuration = 0.5
+                self.opponentTurnImage.isHidden = true
+                self.opponentTurnImage.stopAnimating()
                 self.playerImage.startAnimating()
+                self.playerTurnImage.isHidden = false
+                self.playerTurnImage.startAnimating()
             } else {
                 self.playerImage.stopAnimating()
-                
-                self.opponentImage.animationImages = imagesToAnimate
-                self.opponentImage.animationDuration = 0.5
+                self.playerTurnImage.isHidden = true
+                self.playerTurnImage.stopAnimating()
                 self.opponentImage.startAnimating()
+                self.opponentTurnImage.isHidden = false
+                self.opponentTurnImage.startAnimating()
+            }
+        }
+    }
+    
+    func animateBlurBackground() {
+        DispatchQueue.main.async {
+            let blurEffect = UIBlurEffect(style: .light)
+            let effectView = UIVisualEffectView(effect: blurEffect)
+            effectView.frame = self.backgroundImage.frame
+            self.backgroundImage.addSubview(effectView)
+            effectView.alpha = 0
+            
+            UIView.animate(withDuration: 0.8) {
+                effectView.alpha = 0.7
             }
         }
     }
@@ -242,6 +271,17 @@ extension BattleFieldViewController: UICollectionViewDelegate, UICollectionViewD
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        cell.alpha = 0
+        
+        UIView.beginAnimations("easeIn", context: nil)
+        UIView.setAnimationDuration(TimeInterval(0.3))
+        cell.transform = .identity
+        cell.alpha = 1
+        UIView.commitAnimations()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

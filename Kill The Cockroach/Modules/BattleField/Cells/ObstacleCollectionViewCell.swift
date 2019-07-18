@@ -16,6 +16,8 @@ class ObstacleCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.alpha = 0
+        
         var images = [UIImage]()
         for number in 1...25 {
             if let iv = UIImage(named: "bom-atom_\(number)") {
@@ -33,5 +35,4 @@ class ObstacleCollectionViewCell: UICollectionViewCell {
         obstacleImage.animationDuration = 1.2
         obstacleImage.animationRepeatCount = 1
     }
-
 }
