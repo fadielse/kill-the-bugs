@@ -76,7 +76,7 @@
 		1BF4E58B22E06F5B00D60FBF /* turn-8 in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4E57622E06F5B00D60FBF /* turn-8 */; };
 		1BF4E58C22E06F5B00D60FBF /* turn-1 in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4E57722E06F5B00D60FBF /* turn-1 */; };
 		1BF4E58D22E06F5B00D60FBF /* turn-6 in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4E57822E06F5B00D60FBF /* turn-6 */; };
-		2B07058BF74018F2A965DE7E /* Pods_Kill_The_Cockroach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D14CE411B58987E3189120D /* Pods_Kill_The_Cockroach.framework */; };
+		49BCED7E8BA8F885A943E2E5 /* Pods_Kill_The_Bugs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EF6B82A770F5684A4FA587 /* Pods_Kill_The_Bugs.framework */; };
 		FF41A5FA22CFA65B00AC75BB /* VIDEOPHREAK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF41A5F922CFA65B00AC75BB /* VIDEOPHREAK.ttf */; };
 		FF41A60722CFA84600AC75BB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF41A60422CFA84500AC75BB /* Home.storyboard */; };
 		FF41A60822CFA84600AC75BB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41A60522CFA84500AC75BB /* HomePresenter.swift */; };
@@ -97,6 +97,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03D23674A90FA9C2031FC6B9 /* Pods-Kill The Bugs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kill The Bugs.release.xcconfig"; path = "Target Support Files/Pods-Kill The Bugs/Pods-Kill The Bugs.release.xcconfig"; sourceTree = "<group>"; };
 		1B15043122D482E4000D1141 /* FinishBattle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinishBattle.storyboard; sourceTree = "<group>"; };
 		1B15043222D482E4000D1141 /* FinishBattlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishBattlePresenter.swift; sourceTree = "<group>"; };
 		1B15043322D482E4000D1141 /* FinishBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishBattleViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +143,7 @@
 		1BC9549522E1B53200525B4A /* cockroach-loading-1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cockroach-loading-1"; sourceTree = "<group>"; };
 		1BC9549622E1B53200525B4A /* cockroach-loading-0 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cockroach-loading-0"; sourceTree = "<group>"; };
 		1BC9549722E1B53200525B4A /* cockroach-loading-2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cockroach-loading-2"; sourceTree = "<group>"; };
-		1BE51A2222CF621A00FB552B /* Kill The Cockroach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kill The Cockroach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE51A2222CF621A00FB552B /* Kill The Bugs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kill The Bugs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE51A2522CF621A00FB552B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE51A2C22CF621B00FB552B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE51A2F22CF621B00FB552B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -168,7 +169,8 @@
 		1BF4E57622E06F5B00D60FBF /* turn-8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "turn-8"; sourceTree = "<group>"; };
 		1BF4E57722E06F5B00D60FBF /* turn-1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "turn-1"; sourceTree = "<group>"; };
 		1BF4E57822E06F5B00D60FBF /* turn-6 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "turn-6"; sourceTree = "<group>"; };
-		9D14CE411B58987E3189120D /* Pods_Kill_The_Cockroach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kill_The_Cockroach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BBB50E04DF7AE4310E5607 /* Pods-Kill The Bugs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kill The Bugs.debug.xcconfig"; path = "Target Support Files/Pods-Kill The Bugs/Pods-Kill The Bugs.debug.xcconfig"; sourceTree = "<group>"; };
+		96EF6B82A770F5684A4FA587 /* Pods_Kill_The_Bugs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kill_The_Bugs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3ADA4E20AD850B138AE9B9 /* Pods-Kill The Cockroach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kill The Cockroach.debug.xcconfig"; path = "Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach.debug.xcconfig"; sourceTree = "<group>"; };
 		EED9AF5DDBAE80BE90DD0D26 /* Pods-Kill The Cockroach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kill The Cockroach.release.xcconfig"; path = "Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach.release.xcconfig"; sourceTree = "<group>"; };
 		FF41A5F922CFA65B00AC75BB /* VIDEOPHREAK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VIDEOPHREAK.ttf; sourceTree = "<group>"; };
@@ -195,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B07058BF74018F2A965DE7E /* Pods_Kill_The_Cockroach.framework in Frameworks */,
+				49BCED7E8BA8F885A943E2E5 /* Pods_Kill_The_Bugs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +310,7 @@
 		1BE51A1922CF621A00FB552B = {
 			isa = PBXGroup;
 			children = (
-				1BE51A2422CF621A00FB552B /* Kill The Cockroach */,
+				1BE51A2422CF621A00FB552B /* Kill The Bugs */,
 				1BE51A2322CF621A00FB552B /* Products */,
 				BD3C6606510E50E82134B44D /* Pods */,
 				32A535ED6778F449985AD07F /* Frameworks */,
@@ -318,12 +320,12 @@
 		1BE51A2322CF621A00FB552B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BE51A2222CF621A00FB552B /* Kill The Cockroach.app */,
+				1BE51A2222CF621A00FB552B /* Kill The Bugs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1BE51A2422CF621A00FB552B /* Kill The Cockroach */ = {
+		1BE51A2422CF621A00FB552B /* Kill The Bugs */ = {
 			isa = PBXGroup;
 			children = (
 				1BE51A2522CF621A00FB552B /* AppDelegate.swift */,
@@ -335,7 +337,7 @@
 				FF41A62822CFB2B800AC75BB /* Services */,
 				FF41A5F822CFA64800AC75BB /* SupportFiles */,
 			);
-			path = "Kill The Cockroach";
+			path = "Kill The Bugs";
 			sourceTree = "<group>";
 		};
 		1BF4E56322E06F5B00D60FBF /* turn */ = {
@@ -369,7 +371,7 @@
 		32A535ED6778F449985AD07F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D14CE411B58987E3189120D /* Pods_Kill_The_Cockroach.framework */,
+				96EF6B82A770F5684A4FA587 /* Pods_Kill_The_Bugs.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -379,6 +381,8 @@
 			children = (
 				DE3ADA4E20AD850B138AE9B9 /* Pods-Kill The Cockroach.debug.xcconfig */,
 				EED9AF5DDBAE80BE90DD0D26 /* Pods-Kill The Cockroach.release.xcconfig */,
+				50BBB50E04DF7AE4310E5607 /* Pods-Kill The Bugs.debug.xcconfig */,
+				03D23674A90FA9C2031FC6B9 /* Pods-Kill The Bugs.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -486,9 +490,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1BE51A2122CF621A00FB552B /* Kill The Cockroach */ = {
+		1BE51A2122CF621A00FB552B /* Kill The Bugs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1BE51A3422CF621B00FB552B /* Build configuration list for PBXNativeTarget "Kill The Cockroach" */;
+			buildConfigurationList = 1BE51A3422CF621B00FB552B /* Build configuration list for PBXNativeTarget "Kill The Bugs" */;
 			buildPhases = (
 				7808C8DB73A43A06E0384D55 /* [CP] Check Pods Manifest.lock */,
 				1BE51A1E22CF621A00FB552B /* Sources */,
@@ -500,9 +504,9 @@
 			);
 			dependencies = (
 			);
-			name = "Kill The Cockroach";
+			name = "Kill The Bugs";
 			productName = "Kill The Cockroach";
-			productReference = 1BE51A2222CF621A00FB552B /* Kill The Cockroach.app */;
+			productReference = 1BE51A2222CF621A00FB552B /* Kill The Bugs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -520,7 +524,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1BE51A1D22CF621A00FB552B /* Build configuration list for PBXProject "Kill The Cockroach" */;
+			buildConfigurationList = 1BE51A1D22CF621A00FB552B /* Build configuration list for PBXProject "Kill The Bugs" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -533,7 +537,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1BE51A2122CF621A00FB552B /* Kill The Cockroach */,
+				1BE51A2122CF621A00FB552B /* Kill The Bugs */,
 			);
 		};
 /* End PBXProject section */
@@ -618,15 +622,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kill The Bugs/Pods-Kill The Bugs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Kill The Bugs/Pods-Kill The Bugs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kill The Cockroach/Pods-Kill The Cockroach-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kill The Bugs/Pods-Kill The Bugs-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7808C8DB73A43A06E0384D55 /* [CP] Check Pods Manifest.lock */ = {
@@ -644,7 +648,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kill The Cockroach-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Kill The Bugs-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -816,17 +820,17 @@
 		};
 		1BE51A3522CF621B00FB552B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE3ADA4E20AD850B138AE9B9 /* Pods-Kill The Cockroach.debug.xcconfig */;
+			baseConfigurationReference = 50BBB50E04DF7AE4310E5607 /* Pods-Kill The Bugs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9GT4QP8FS;
-				INFOPLIST_FILE = "Kill The Cockroach/SupportFiles/Info.plist";
+				INFOPLIST_FILE = "Kill The Bugs/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fadielse.Kill-The-Cockroach";
+				PRODUCT_BUNDLE_IDENTIFIER = "fadielse.Kill-The-Bugs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -835,17 +839,17 @@
 		};
 		1BE51A3622CF621B00FB552B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EED9AF5DDBAE80BE90DD0D26 /* Pods-Kill The Cockroach.release.xcconfig */;
+			baseConfigurationReference = 03D23674A90FA9C2031FC6B9 /* Pods-Kill The Bugs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9GT4QP8FS;
-				INFOPLIST_FILE = "Kill The Cockroach/SupportFiles/Info.plist";
+				INFOPLIST_FILE = "Kill The Bugs/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "fadielse.Kill-The-Cockroach";
+				PRODUCT_BUNDLE_IDENTIFIER = "fadielse.Kill-The-Bugs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -855,7 +859,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1BE51A1D22CF621A00FB552B /* Build configuration list for PBXProject "Kill The Cockroach" */ = {
+		1BE51A1D22CF621A00FB552B /* Build configuration list for PBXProject "Kill The Bugs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE51A3222CF621B00FB552B /* Debug */,
@@ -864,7 +868,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1BE51A3422CF621B00FB552B /* Build configuration list for PBXNativeTarget "Kill The Cockroach" */ = {
+		1BE51A3422CF621B00FB552B /* Build configuration list for PBXNativeTarget "Kill The Bugs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1BE51A3522CF621B00FB552B /* Debug */,
