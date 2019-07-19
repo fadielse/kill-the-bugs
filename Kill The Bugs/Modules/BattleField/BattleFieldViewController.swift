@@ -174,6 +174,8 @@ extension BattleFieldViewController {
             self.missileImage.isHidden = true
             self.animateExplodeCell()
         }
+        
+        collectionView.isUserInteractionEnabled = false
     }
     
     func animateExplodeCell() {
@@ -193,8 +195,13 @@ extension BattleFieldViewController {
             } else {
                 let deadlineTime = DispatchTime.now() + .milliseconds(1300)
                 DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-                    self.animateTurnImage()
                     self.presenter.sendSwitchPlayer()
+                    
+                    let deadlineTime = DispatchTime.now() + .milliseconds(500)
+                    DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                        self.collectionView.isUserInteractionEnabled = true
+                        self.animateTurnImage()
+                    }
                 }
             }
         }
