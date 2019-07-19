@@ -90,7 +90,7 @@
                         <outlet property="hostButton" destination="ZKb-t3-mxz" id="mL8-jh-2F2"/>
                         <outlet property="joinButton" destination="wGC-LD-LjL" id="eY8-HX-IGU"/>
                         <outlet property="missileImage" destination="L6Z-YY-hzu" id="Jvn-7s-uCw"/>
-                        <segue destination="bgz-f3-0ZX" kind="presentation" identifier="jumpToLobby" id="Bx4-nt-ZVJ"/>
+                        <segue destination="bgz-f3-0ZX" kind="presentation" identifier="jumpToLobby" modalTransitionStyle="crossDissolve" id="Bx4-nt-ZVJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPR-qS-kQI" sceneMemberID="firstResponder"/>

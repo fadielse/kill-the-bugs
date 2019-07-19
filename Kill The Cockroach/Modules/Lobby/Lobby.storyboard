@@ -122,7 +122,7 @@
                         <outlet property="startHostButton" destination="HtX-u6-BN3" id="0xG-6f-99K"/>
                         <outlet property="tableView" destination="IsJ-QT-7qK" id="jq7-ed-orx"/>
                         <outlet property="titleLabel" destination="5l5-V3-hCk" id="zdo-Bi-4UX"/>
-                        <segue destination="Ztz-6R-ic6" kind="presentation" identifier="jumpToBattleField" id="x3b-sU-VBo"/>
+                        <segue destination="Ztz-6R-ic6" kind="presentation" identifier="jumpToBattleField" modalTransitionStyle="crossDissolve" id="x3b-sU-VBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-u4-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
