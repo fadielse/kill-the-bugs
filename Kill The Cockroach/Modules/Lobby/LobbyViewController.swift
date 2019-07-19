@@ -140,7 +140,13 @@ class LobbyViewController: BaseViewController {
 }
 
 extension LobbyViewController: LobbyView {
-    // TODO: implement view methods
+    func showLoading(withTitle title: String?) {
+        showLoading(withView: self.view, andTitle: title)
+    }
+    
+    func stopLoading() {
+        hideLoading()
+    }
 }
 
 extension LobbyViewController: UITextFieldDelegate {
@@ -177,6 +183,7 @@ extension LobbyViewController: GameServiceDelegate {
         self.presenter.gameService.stopBrowse()
         
         DispatchQueue.main.async {
+            self.stopLoading()
             self.performSegue(withIdentifier: SegueConstants.Lobby.jumpToBattleField, sender: nil)
         }
     }

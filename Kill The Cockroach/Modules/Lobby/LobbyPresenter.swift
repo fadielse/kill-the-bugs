@@ -22,7 +22,8 @@ protocol LobbyViewPresenter: class {
 }
 
 protocol LobbyView: class {
-    // TODO: Declare view methods
+    func showLoading(withTitle title: String?)
+    func stopLoading()
 }
 
 class LobbyPresenter: LobbyViewPresenter {
@@ -95,6 +96,7 @@ class LobbyPresenter: LobbyViewPresenter {
             return
         }
         
+        view.showLoading(withTitle: "Connecting...")
         gameService.invitePlayer(withPeerId: peerId)
     }
     

@@ -52,6 +52,8 @@ class BattleFieldViewController: BaseViewController {
         if presenter.getIsPlayerHost() {
             prepareBattle()
         }
+        
+        showLoading(withView: self.view, andTitle: "Preparing...")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -126,14 +128,16 @@ class BattleFieldViewController: BaseViewController {
     
     func animateBlurBackground() {
         DispatchQueue.main.async {
-            let blurEffect = UIBlurEffect(style: .light)
+            self.hideLoading()
+            
+            let blurEffect = UIBlurEffect(style: .regular)
             let effectView = UIVisualEffectView(effect: blurEffect)
             effectView.frame = self.backgroundImage.frame
             self.backgroundImage.addSubview(effectView)
             effectView.alpha = 0
             
-            UIView.animate(withDuration: 0.8) {
-                effectView.alpha = 0.7
+            UIView.animate(withDuration: 0.3) {
+                effectView.alpha = 1.0
             }
         }
     }

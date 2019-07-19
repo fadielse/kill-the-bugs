@@ -46,6 +46,12 @@
 		1B905A8E22D8602D00BDB9FC /* UserDefaultConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B905A8D22D8602D00BDB9FC /* UserDefaultConstant.swift */; };
 		1B92DFAC22DF0461002A5C57 /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92DFAB22DF0461002A5C57 /* UIImage+Rotate.swift */; };
 		1BBC8C3A22D71E9000FE374F /* EnumBattleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC8C3922D71E9000FE374F /* EnumBattleStatus.swift */; };
+		1BC9548F22E1AB0A00525B4A /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC9548E22E1AB0A00525B4A /* LoadingView.xib */; };
+		1BC9549122E1AB2700525B4A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9549022E1AB2700525B4A /* LoadingView.swift */; };
+		1BC9549322E1B1BF00525B4A /* UIView+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9549222E1B1BF00525B4A /* UIView+Xib.swift */; };
+		1BC9549822E1B53200525B4A /* cockroach-loading-1 in Resources */ = {isa = PBXBuildFile; fileRef = 1BC9549522E1B53200525B4A /* cockroach-loading-1 */; };
+		1BC9549922E1B53200525B4A /* cockroach-loading-0 in Resources */ = {isa = PBXBuildFile; fileRef = 1BC9549622E1B53200525B4A /* cockroach-loading-0 */; };
+		1BC9549A22E1B53200525B4A /* cockroach-loading-2 in Resources */ = {isa = PBXBuildFile; fileRef = 1BC9549722E1B53200525B4A /* cockroach-loading-2 */; };
 		1BE51A2622CF621A00FB552B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE51A2522CF621A00FB552B /* AppDelegate.swift */; };
 		1BE51A2D22CF621B00FB552B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2C22CF621B00FB552B /* Assets.xcassets */; };
 		1BE51A3022CF621B00FB552B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE51A2E22CF621B00FB552B /* LaunchScreen.storyboard */; };
@@ -130,6 +136,12 @@
 		1B905A8D22D8602D00BDB9FC /* UserDefaultConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultConstant.swift; sourceTree = "<group>"; };
 		1B92DFAB22DF0461002A5C57 /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
 		1BBC8C3922D71E9000FE374F /* EnumBattleStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumBattleStatus.swift; sourceTree = "<group>"; };
+		1BC9548E22E1AB0A00525B4A /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		1BC9549022E1AB2700525B4A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1BC9549222E1B1BF00525B4A /* UIView+Xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Xib.swift"; sourceTree = "<group>"; };
+		1BC9549522E1B53200525B4A /* cockroach-loading-1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cockroach-loading-1"; sourceTree = "<group>"; };
+		1BC9549622E1B53200525B4A /* cockroach-loading-0 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cockroach-loading-0"; sourceTree = "<group>"; };
+		1BC9549722E1B53200525B4A /* cockroach-loading-2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cockroach-loading-2"; sourceTree = "<group>"; };
 		1BE51A2222CF621A00FB552B /* Kill The Cockroach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kill The Cockroach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE51A2522CF621A00FB552B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BE51A2C22CF621B00FB552B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,6 +224,7 @@
 		1B58AB7322D3282100C77FFD /* SpriteImages */ = {
 			isa = PBXGroup;
 			children = (
+				1BC9549422E1B53200525B4A /* cockroach-loading */,
 				1BF4E56322E06F5B00D60FBF /* turn */,
 				1B58AB7422D3283D00C77FFD /* bom-atom-sprites */,
 				1B58AB8E22D3283D00C77FFD /* tree-sprites */,
@@ -268,8 +281,28 @@
 			children = (
 				1B58ABB322D3403200C77FFD /* UIView+GlobalFrame.swift */,
 				1B92DFAB22DF0461002A5C57 /* UIImage+Rotate.swift */,
+				1BC9549222E1B1BF00525B4A /* UIView+Xib.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1BC9548D22E1AAD100525B4A /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				1BC9548E22E1AB0A00525B4A /* LoadingView.xib */,
+				1BC9549022E1AB2700525B4A /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		1BC9549422E1B53200525B4A /* cockroach-loading */ = {
+			isa = PBXGroup;
+			children = (
+				1BC9549522E1B53200525B4A /* cockroach-loading-1 */,
+				1BC9549622E1B53200525B4A /* cockroach-loading-0 */,
+				1BC9549722E1B53200525B4A /* cockroach-loading-2 */,
+			);
+			path = "cockroach-loading";
 			sourceTree = "<group>";
 		};
 		1BE51A1922CF621A00FB552B = {
@@ -353,6 +386,7 @@
 		FF41A5F822CFA64800AC75BB /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1BC9548D22E1AAD100525B4A /* LoadingView */,
 				1B58AB7322D3282100C77FFD /* SpriteImages */,
 				FF41A62522CFAEEC00AC75BB /* Base */,
 				1BE51A3122CF621B00FB552B /* Info.plist */,
@@ -518,6 +552,7 @@
 				1BF4E57A22E06F5B00D60FBF /* turn-17 in Resources */,
 				1B58ABAB22D3283D00C77FFD /* bom-atom_12.png in Resources */,
 				1B58ABA622D3283D00C77FFD /* bom-atom_4.png in Resources */,
+				1BC9548F22E1AB0A00525B4A /* LoadingView.xib in Resources */,
 				1B58ABA522D3283D00C77FFD /* bom-atom_10.png in Resources */,
 				1B58ABBD22D3498700C77FFD /* tree-sprites_4.png in Resources */,
 				1BE51A3022CF621B00FB552B /* LaunchScreen.storyboard in Resources */,
@@ -555,11 +590,13 @@
 				1B58ABA322D3283D00C77FFD /* bom-atom_1.png in Resources */,
 				1B15043422D482E4000D1141 /* FinishBattle.storyboard in Resources */,
 				1B58AB9922D3283D00C77FFD /* bom-atom_9.png in Resources */,
+				1BC9549A22E1B53200525B4A /* cockroach-loading-2 in Resources */,
 				1B58ABAA22D3283D00C77FFD /* bom-atom_13.png in Resources */,
 				1BF4E58122E06F5B00D60FBF /* turn-2 in Resources */,
 				1BF4E58222E06F5B00D60FBF /* turn-4 in Resources */,
 				1BF4E58322E06F5B00D60FBF /* turn-5 in Resources */,
 				FF41A60722CFA84600AC75BB /* Home.storyboard in Resources */,
+				1BC9549922E1B53200525B4A /* cockroach-loading-0 in Resources */,
 				1B58ABBA22D3498700C77FFD /* tree-sprites_2.png in Resources */,
 				1BF4E57F22E06F5B00D60FBF /* turn-18 in Resources */,
 				1B58AB9622D3283D00C77FFD /* bom-atom_8.png in Resources */,
@@ -567,6 +604,7 @@
 				1B58ABBB22D3498700C77FFD /* tree-sprites_1.png in Resources */,
 				1BF4E57922E06F5B00D60FBF /* turn-19 in Resources */,
 				1B58AB9522D3283D00C77FFD /* bom-atom_22.png in Resources */,
+				1BC9549822E1B53200525B4A /* cockroach-loading-1 in Resources */,
 				FF41A61C22CFA9A900AC75BB /* Lobby.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,6 +661,7 @@
 				1B92DFAC22DF0461002A5C57 /* UIImage+Rotate.swift in Sources */,
 				FF41A62A22CFB2E200AC75BB /* GameService.swift in Sources */,
 				1B58AB7122D3269700C77FFD /* ObstacleCollectionViewCell.swift in Sources */,
+				1BC9549122E1AB2700525B4A /* LoadingView.swift in Sources */,
 				FF41A61822CFA8D800AC75BB /* BattleFieldViewController.swift in Sources */,
 				1B58ABB422D3403200C77FFD /* UIView+GlobalFrame.swift in Sources */,
 				FF41A62F22D0956C00AC75BB /* EnumPackageType.swift in Sources */,
@@ -641,6 +680,7 @@
 				FF41A62422CFADFC00AC75BB /* SegueConstants.swift in Sources */,
 				1BBC8C3A22D71E9000FE374F /* EnumBattleStatus.swift in Sources */,
 				FF41A63122D0961000AC75BB /* GamePlay.swift in Sources */,
+				1BC9549322E1B1BF00525B4A /* UIView+Xib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
