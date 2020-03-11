@@ -11,4 +11,4 @@ https://www.youtube.com/watch?v=XUyqqsjcIPk
 	<img src="https://avatars3.githubusercontent.com/u/15564979?s=460&v=4" width="100" height="100">
 </p>
 
-**Fadilah Hasan** - [https://me.kodingkita.com](https://me.kodingkita.com)
+**Fadilah Hasan** - [https://www.linkedin.com/in/fadielse](https://www.linkedin.com/in/fadielse)
